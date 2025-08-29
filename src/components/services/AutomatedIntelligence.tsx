@@ -78,7 +78,7 @@ export default function AutomatedIntelligence() {
           bar.style.fill = '#FF4444';
           bar.style.filter = 'drop-shadow(0 0 10px #FF4444)';
         } else {
-          bar.style.fill = i % 2 === 0 ? '#99CC00' : '#76B900';
+          bar.style.fill = i % 2 === 0 ? '#22C55E' : '#22C55E';
           bar.style.filter = 'drop-shadow(0 0 3px currentColor)';
         }
         
@@ -136,8 +136,8 @@ export default function AutomatedIntelligence() {
       <svg ref={svgRef} viewBox="0 0 400 250" className="w-full h-full" fill="none">
         <defs>
           <linearGradient id="trendGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-            <stop offset="0%" stopColor="#99CC00" stopOpacity="0.8"/>
-            <stop offset="100%" stopColor="#0E613C" stopOpacity="0.3"/>
+            <stop offset="0%" stopColor="#22C55E" stopOpacity="0.8"/>
+            <stop offset="100%" stopColor="#16A34A" stopOpacity="0.3"/>
           </linearGradient>
           <linearGradient id="predictionGradient" x1="0%" y1="0%" x2="100%" y2="0%">
             <stop offset="0%" stopColor="#00CCFF" stopOpacity="0.6"/>
@@ -151,21 +151,21 @@ export default function AutomatedIntelligence() {
         {/* Grid background */}
         <g opacity="0.1">
           {[...Array(8)].map((_, i) => (
-            <line key={`h${i}`} x1="0" y1={i * 30 + 20} x2="400" y2={i * 30 + 20} stroke="#99CC00" strokeWidth="0.5"/>
+            <line key={`h${i}`} x1="0" y1={i * 30 + 20} x2="400" y2={i * 30 + 20} stroke="#22C55E" strokeWidth="0.5"/>
           ))}
           {[...Array(10)].map((_, i) => (
-            <line key={`v${i}`} x1={i * 40 + 20} y1="0" x2={i * 40 + 20} y2="250" stroke="#99CC00" strokeWidth="0.5"/>
+            <line key={`v${i}`} x1={i * 40 + 20} y1="0" x2={i * 40 + 20} y2="250" stroke="#22C55E" strokeWidth="0.5"/>
           ))}
         </g>
         
         {/* Dynamic bar chart */}
         <g>
-          <rect className="data-bar" x="40" y="150" width="30" height="30" fill="#99CC00"/>
-          <rect className="data-bar" x="90" y="140" width="30" height="40" fill="#76B900"/>
-          <rect className="data-bar" x="140" y="145" width="30" height="35" fill="#99CC00"/>
-          <rect className="data-bar" x="190" y="130" width="30" height="50" fill="#76B900"/>
-          <rect className="data-bar" x="240" y="135" width="30" height="45" fill="#99CC00"/>
-          <rect className="data-bar" x="290" y="125" width="30" height="55" fill="#76B900"/>
+          <rect className="data-bar" x="40" y="150" width="30" height="30" fill="#22C55E"/>
+          <rect className="data-bar" x="90" y="140" width="30" height="40" fill="#22C55E"/>
+          <rect className="data-bar" x="140" y="145" width="30" height="35" fill="#22C55E"/>
+          <rect className="data-bar" x="190" y="130" width="30" height="50" fill="#22C55E"/>
+          <rect className="data-bar" x="240" y="135" width="30" height="45" fill="#22C55E"/>
+          <rect className="data-bar" x="290" y="125" width="30" height="55" fill="#22C55E"/>
         </g>
         
         {/* Trend line */}
@@ -176,14 +176,14 @@ export default function AutomatedIntelligence() {
         
         {/* Floating data points */}
         <circle className="data-point" r="2" fill="#00CCFF"/>
-        <circle className="data-point" r="2" fill="#99CC00"/>
+        <circle className="data-point" r="2" fill="#22C55E"/>
         <circle className="data-point" r="2" fill="#00CCFF"/>
-        <circle className="data-point" r="2" fill="#76B900"/>
+        <circle className="data-point" r="2" fill="#22C55E"/>
         
         {/* Primary metric display */}
         <g transform="translate(350, 40)">
-          <rect x="-35" y="-20" width="70" height="35" rx="5" fill="#0E613C" opacity="0.8"/>
-          <text x="0" y="0" textAnchor="middle" dominantBaseline="middle" fill="#99CC00" fontSize="16" fontFamily="monospace" fontWeight="bold">
+          <rect x="-35" y="-20" width="70" height="35" rx="5" fill="#16A34A" opacity="0.8"/>
+          <text x="0" y="0" textAnchor="middle" dominantBaseline="middle" fill="#22C55E" fontSize="16" fontFamily="monospace" fontWeight="bold">
             {primaryMetric}%
           </text>
         </g>
@@ -197,7 +197,7 @@ export default function AutomatedIntelligence() {
               width="80" 
               height="24" 
               rx="12" 
-              fill={insight.type === 'anomaly' ? '#FF4444' : insight.type === 'prediction' ? '#00CCFF' : '#76B900'}
+              fill={insight.type === 'anomaly' ? '#FF4444' : insight.type === 'prediction' ? '#00CCFF' : '#22C55E'}
               opacity="0.2"
             />
             <text 
@@ -205,7 +205,7 @@ export default function AutomatedIntelligence() {
               y="0" 
               textAnchor="middle" 
               dominantBaseline="middle" 
-              fill={insight.type === 'anomaly' ? '#FF4444' : insight.type === 'prediction' ? '#00CCFF' : '#99CC00'}
+              fill={insight.type === 'anomaly' ? '#FF4444' : insight.type === 'prediction' ? '#00CCFF' : '#22C55E'}
               fontSize="10" 
               fontFamily="monospace"
               fontWeight="bold"
@@ -216,7 +216,7 @@ export default function AutomatedIntelligence() {
         ))}
         
         {/* Title */}
-        <text x="20" y="15" fill="#99CC00" fontSize="11" fontFamily="monospace" opacity="0.8">
+        <text x="20" y="15" fill="#22C55E" fontSize="11" fontFamily="monospace" opacity="0.8">
           LIVE INTELLIGENCE FEED
         </text>
       </svg>

@@ -14,9 +14,9 @@ export default function Header() {
           <Link href="/" className="flex items-center" onClick={() => setOpen(false)}>
             <div
               className="w-9 h-9 rounded-lg mr-3"
-              style={{ background: 'linear-gradient(135deg, #0E613C 0%, #99CC00 100%)' }}
+              style={{ background: 'linear-gradient(135deg, #16A34A 0%, #22C55E 100%)' }}
             />
-            <span className="text-2xl font-light text-[#99CC00] tracking-wide" style={{ fontFamily: 'Raleway' }}>
+            <span className="text-2xl font-light text-[#22C55E] tracking-wide" style={{ fontFamily: 'Raleway' }}>
               Deep Sight
             </span>
           </Link>
@@ -29,7 +29,7 @@ export default function Header() {
             <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Contact</Link>
             <Link
               href="/#contact"
-              className="px-4 py-2 rounded-xl bg-[#76B900] text-black font-medium hover:brightness-110 transition tracking-wide"
+              className="px-4 py-2 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-medium transition tracking-wide"
               style={{ fontFamily: 'Raleway' }}
             >
               Get Started
@@ -83,7 +83,7 @@ export default function Header() {
             </Link>
             <Link
               href="/#contact"
-              className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#76B900] text-black font-medium hover:brightness-110 transition tracking-wide"
+              className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-medium transition tracking-wide"
               onClick={() => setOpen(false)}
             >
               Get Started

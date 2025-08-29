@@ -28,7 +28,7 @@ export default function NavButton({
   return (
     <button 
       onClick={handleClick}
-      className="px-10 py-5 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition text-xl"
+      className="px-10 py-5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold transition text-xl"
       style={{fontFamily: 'Poppins'}}
     >
       {children}

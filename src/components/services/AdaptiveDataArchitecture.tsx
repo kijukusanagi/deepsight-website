@@ -196,7 +196,7 @@ export default function AdaptiveDataArchitecture() {
               line.setAttribute('opacity', `${0.8 + 0.2 * Math.sin(t * 8)}`);
               line.setAttribute('filter', 'url(#healGlow)');
             } else {
-              line.setAttribute('stroke', '#99CC00');
+              line.setAttribute('stroke', '#22C55E');
               line.setAttribute('stroke-width', '1.5');
               line.setAttribute('stroke-opacity', `${0.3 + node.health * 0.4}`);
             }
@@ -249,10 +249,10 @@ export default function AdaptiveDataArchitecture() {
             circle.setAttribute('fill', '#00CCFF');
             circle.setAttribute('opacity', `${node.health}`);
           } else if (node.type === 'core') {
-            circle.setAttribute('fill', '#0E613C');
+            circle.setAttribute('fill', '#16A34A');
             circle.setAttribute('opacity', `${0.9 + node.pulse * 0.1}`);
           } else {
-            circle.setAttribute('fill', '#76B900');
+            circle.setAttribute('fill', '#22C55E');
             circle.setAttribute('opacity', `${0.7 + node.health * 0.3}`);
           }
           
@@ -264,7 +264,7 @@ export default function AdaptiveDataArchitecture() {
             ring.setAttribute('cx', `${node.x}`);
             ring.setAttribute('cy', `${node.y}`);
             ring.setAttribute('r', `${morphRadius + 8}`);
-            ring.setAttribute('stroke', '#99CC00');
+            ring.setAttribute('stroke', '#22C55E');
             ring.setAttribute('stroke-width', '1');
             ring.setAttribute('fill', 'none');
             ring.setAttribute('opacity', `${(node.pulse - 0.7) * 0.8}`);
@@ -311,7 +311,7 @@ export default function AdaptiveDataArchitecture() {
         {/* Subtle background energy field */}
         <g opacity="0.03">
           {[...Array(12)].map((_, i) => (
-            <circle key={i} cx="200" cy="125" r={20 * (i + 1)} stroke="#99CC00" strokeWidth="0.5" fill="none">
+            <circle key={i} cx="200" cy="125" r={20 * (i + 1)} stroke="#22C55E" strokeWidth="0.5" fill="none">
               <animate attributeName="opacity" values="0.03;0.08;0.03" dur={`${3 + i * 0.5}s`} repeatCount="indefinite"/>
             </circle>
           ))}
@@ -345,7 +345,7 @@ export default function AdaptiveDataArchitecture() {
         </g>
         
         {/* Dynamic status text */}
-        <text x="20" y="15" fill="#99CC00" fontSize="11" fontFamily="monospace" opacity="0.8">
+        <text x="20" y="15" fill="#22C55E" fontSize="11" fontFamily="monospace" opacity="0.8">
           {statusMessage}
         </text>
         

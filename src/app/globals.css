@@ -33,7 +33,7 @@
 
 @layer components {
   .gradient-text {
-    background: linear-gradient(135deg, #0E613C 0%, #99CC00 100%);
+    background: linear-gradient(135deg, #16A34A 0%, #22C55E 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -42,28 +42,28 @@
   .glass-card {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(153, 204, 0, 0.2);
+    border: 1px solid rgba(34, 197, 94, 0.2);
     border-radius: 16px;
   }
   
   .btn-primary {
     @apply relative overflow-hidden text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl;
-    background: linear-gradient(135deg, #0E613C 0%, #99CC00 50%, #76B900 100%);
-    box-shadow: 0 10px 30px rgba(153, 204, 0, 0.3);
+    background: linear-gradient(135deg, #16A34A 0%, #22C55E 50%, #22C55E 100%);
+    box-shadow: 0 10px 30px rgba(34, 197, 94, 0.3);
   }
   
   .btn-primary:hover {
-    box-shadow: 0 15px 40px rgba(153, 204, 0, 0.4);
+    box-shadow: 0 15px 40px rgba(34, 197, 94, 0.4);
   }
   
   .btn-secondary {
     @apply glass-card text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105;
-    border: 1px solid rgba(118, 185, 0, 0.3);
+    border: 1px solid rgba(34, 197, 94, 0.3);
   }
   
   .btn-secondary:hover {
-    background: rgba(118, 185, 0, 0.1);
-    border-color: rgba(118, 185, 0, 0.5);
+    background: rgba(34, 197, 94, 0.1);
+    border-color: rgba(34, 197, 94, 0.5);
   }
   
   .floating {
@@ -71,17 +71,17 @@
   }
   
   .glow-effect {
-    box-shadow: 0 0 30px rgba(153, 204, 0, 0.3);
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
   }
   
   .accent-card-1 {
-    border: 1px solid rgba(14, 97, 60, 0.3);
-    background: linear-gradient(135deg, rgba(14, 97, 60, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+    border: 1px solid rgba(22, 163, 74, 0.3);
+    background: linear-gradient(135deg, rgba(22, 163, 74, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
   }
   
   .accent-card-2 {
-    border: 1px solid rgba(118, 185, 0, 0.3);
-    background: linear-gradient(135deg, rgba(118, 185, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+    border: 1px solid rgba(34, 197, 94, 0.3);
+    background: linear-gradient(135deg, rgba(34, 197, 94, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
   }
   
   .accent-card-3 {
@@ -140,8 +140,8 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 20px rgba(153, 204, 0, 0.4); }
-  50% { box-shadow: 0 0 40px rgba(153, 204, 0, 0.8); }
+  0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.8); }
 }
 
 @keyframes fadeIn {
@@ -158,6 +158,62 @@
     opacity: 1;
     transform: translateX(0);
   }
+}
+
+@keyframes gradientShift {
+  0%, 100% { 
+    background-position: 0% 50%;
+  }
+  50% { 
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes subtleGradientMove {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+.animated-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(34, 197, 94, 0.17),
+    rgba(22, 163, 74, 0.12),
+    rgba(34, 197, 94, 0.08),
+    rgba(22, 163, 74, 0.17),
+    rgba(34, 197, 94, 0.05),
+    rgba(22, 163, 74, 0.14)
+  );
+  background-size: 400% 400%;
+  animation: subtleGradientMove 20s ease infinite;
+}
+
+.gradient-sweep {
+  position: relative;
+  overflow: hidden;
+}
+
+.gradient-sweep::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -100%;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, #22C55E, #16A34A, transparent);
+  transition: left 0.5s ease;
+}
+
+.gradient-sweep:hover::before {
+  left: 100%;
+  transition: left 1s ease;
 }
 
 .pulse-glow {

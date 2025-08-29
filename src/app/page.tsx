@@ -22,6 +22,8 @@ export default function Home() {
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
+          {/* Animated gradient overlay */}
+          <div className="absolute inset-0 animated-gradient" />
         </div>
 
         {/* Data Flow Overlay */}
@@ -29,19 +31,19 @@ export default function Home() {
           <svg className="w-full h-full opacity-40" viewBox="0 0 1200 800" fill="none">
             <defs>
               <linearGradient id="flowGradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#0E613C" stopOpacity="0" />
-                <stop offset="50%" stopColor="#99CC00" stopOpacity="1" />
-                <stop offset="100%" stopColor="#76B900" stopOpacity="0" />
+                <stop offset="0%" stopColor="#16A34A" stopOpacity="0" />
+                <stop offset="50%" stopColor="#22C55E" stopOpacity="1" />
+                <stop offset="100%" stopColor="#22C55E" stopOpacity="0" />
               </linearGradient>
               <linearGradient id="flowGradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#76B900" stopOpacity="0" />
-                <stop offset="50%" stopColor="#99CC00" stopOpacity="0.8" />
-                <stop offset="100%" stopColor="#0E613C" stopOpacity="0" />
+                <stop offset="0%" stopColor="#22C55E" stopOpacity="0" />
+                <stop offset="50%" stopColor="#22C55E" stopOpacity="0.8" />
+                <stop offset="100%" stopColor="#16A34A" stopOpacity="0" />
               </linearGradient>
               <linearGradient id="flowGradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                <stop offset="0%" stopColor="#99CC00" stopOpacity="0" />
-                <stop offset="50%" stopColor="#76B900" stopOpacity="0.6" />
-                <stop offset="100%" stopColor="#99CC00" stopOpacity="0" />
+                <stop offset="0%" stopColor="#22C55E" stopOpacity="0" />
+                <stop offset="50%" stopColor="#22C55E" stopOpacity="0.6" />
+                <stop offset="100%" stopColor="#22C55E" stopOpacity="0" />
               </linearGradient>
             </defs>
             <path
@@ -103,7 +105,7 @@ export default function Home() {
             <div className="flex-1 flex items-center justify-center pt-20">
               <h2 className="text-6xl md:text-7xl font-bold leading-tight text-white text-center">
                 The{" "}
-                <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                   seamless system.
                 </span>
               </h2>
@@ -124,7 +126,7 @@ export default function Home() {
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
                   <button 
                     onClick={() => window.location.href='#contact'}
-                    className="px-10 py-5 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition text-xl hero-tagline"
+                    className="px-10 py-5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold transition text-xl hero-tagline"
                   >
                     Book a Consultation →
                   </button>
@@ -150,7 +152,7 @@ export default function Home() {
       <div className="bg-black pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="space-y-12">
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
+            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
                   <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
@@ -161,7 +163,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
@@ -176,7 +178,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
+            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
                   <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
@@ -187,7 +189,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
@@ -202,7 +204,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
+            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
                   <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
@@ -213,7 +215,7 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
@@ -232,7 +234,7 @@ export default function Home() {
           <div className="text-center mt-20">
             <button 
               onClick={() => window.location.href='#services'}
-              className="px-10 py-5 rounded-xl border-2 border-[#76B900] text-white hover:bg-[#76B900]/10 transition text-2xl font-semibold" 
+              className="px-10 py-5 rounded-xl border-2 border-[#22C55E] text-white hover:bg-[#22C55E]/10 transition text-2xl font-semibold" 
               style={{fontFamily: 'Poppins'}}
             >
               See how we deliver this → Services
@@ -245,7 +247,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h3 className="text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
               Intelligent Integration Services
             </span>
           </h3>
@@ -254,7 +256,7 @@ export default function Home() {
           </p>
           <Link 
             href="/services"
-            className="inline-block px-8 py-3 rounded-xl border-2 border-[#76B900] text-[#76B900] hover:bg-[#76B900]/10 transition text-lg font-medium"
+            className="inline-block px-8 py-3 rounded-xl border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E]/10 transition text-lg font-medium"
             style={{ fontFamily: 'Raleway' }}
           >
             Services
@@ -263,12 +265,12 @@ export default function Home() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {/* Platform Integration */}
-          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
             <div className="mb-6">
               <PlatformIntegration />
             </div>
             <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
-            <p className="text-[#99CC00]/90 italic mb-4">
+            <p className="text-[#22C55E]/90 italic mb-4">
               Self-learning connections that get smarter daily
             </p>
             <p className="text-gray-300">
@@ -277,12 +279,12 @@ export default function Home() {
           </div>
 
           {/* Automated Intelligence */}
-          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
             <div className="mb-6">
               <AutomatedIntelligence />
             </div>
             <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
-            <p className="text-[#99CC00]/90 italic mb-4">
+            <p className="text-[#22C55E]/90 italic mb-4">
               Reports that think, not just display
             </p>
             <p className="text-gray-300">
@@ -291,12 +293,12 @@ export default function Home() {
           </div>
 
           {/* Adaptive Data Architecture */}
-          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
             <div className="mb-6">
               <AdaptiveDataArchitecture />
             </div>
             <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
-            <p className="text-[#99CC00]/90 italic mb-4">
+            <p className="text-[#22C55E]/90 italic mb-4">
               Data structures that evolve with your business
             </p>
             <p className="text-gray-300">
@@ -313,7 +315,7 @@ export default function Home() {
           <div className="p-12 rounded-3xl bg-white/5 backdrop-blur border border-white/10">
             <h3 className="text-5xl font-bold mb-6">
               Ready to{" "}
-              <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                 Transform
               </span>{" "}
               Your Operations?
@@ -323,7 +325,7 @@ export default function Home() {
             </p>
             <button 
               onClick={() => window.location.href='mailto:contact@deepsight.com'}
-              className="px-8 py-4 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 text-lg transition"
+              className="px-8 py-4 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold text-lg transition"
             >
               Book a Consultation
             </button>
@@ -335,7 +337,7 @@ export default function Home() {
       <footer className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <h4 className="text-3xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent mb-4">
+            <h4 className="text-3xl font-bold bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent mb-4">
               Deep Sight
             </h4>
             <p className="text-gray-400">

@@ -12,7 +12,7 @@ export default function AboutPage() {
       <section className="relative py-24">
         {/* Subtle gradient background */}
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#99CC00]/20 to-transparent rounded-full filter blur-3xl" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[400px] bg-gradient-to-b from-[#22C55E]/20 to-transparent rounded-full filter blur-3xl" />
         </div>
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8">
@@ -22,7 +22,7 @@ export default function AboutPage() {
               Deep Sight was founded on one principle:
             </h2>
             <p className="text-5xl md:text-7xl font-bold tracking-tight" style={{ fontFamily: 'Poppins' }}>
-              <span className="bg-gradient-to-r from-[#99CC00] via-[#76B900] to-[#0E613C] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-[#22C55E] via-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                 clarity in flow.
               </span>
             </p>
@@ -30,30 +30,30 @@ export default function AboutPage() {
 
           {/* Expansion Section */}
           <div className="relative">
-            <div className="absolute inset-0 bg-gradient-to-r from-[#99CC00]/10 to-[#0E613C]/10 rounded-3xl blur-2xl animate-pulse" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#22C55E]/10 to-[#16A34A]/10 rounded-3xl blur-2xl animate-pulse" />
             <div className="relative p-12 rounded-3xl bg-black/40 backdrop-blur-xl border border-white/10 hover:border-white/20 transition-all duration-500">
               <p className="text-lg text-gray-400 mb-10 uppercase tracking-wider font-light">
                 That principle drives everything we build:
               </p>
               <div className="space-y-8">
                 <div className="flex items-start hover:translate-x-1 transition-all duration-300">
-                  <span className="text-[#99CC00] mr-4 text-xl mt-1">→</span>
+                  <span className="text-[#22C55E] mr-4 text-xl mt-1">→</span>
                   <p className="text-xl text-gray-100 font-light">
-                    <span className="hover:text-[#99CC00] transition-colors duration-300">Systems</span>{' '}
+                    <span className="hover:text-[#22C55E] transition-colors duration-300">Systems</span>{' '}
                     that move <span className="text-white font-medium">together</span> instead of apart.
                   </p>
                 </div>
                 <div className="flex items-start hover:translate-x-1 transition-all duration-300">
-                  <span className="text-[#99CC00] mr-4 text-xl mt-1">→</span>
+                  <span className="text-[#22C55E] mr-4 text-xl mt-1">→</span>
                   <p className="text-xl text-gray-100 font-light">
-                    <span className="hover:text-[#99CC00] transition-colors duration-300">Data</span>{' '}
+                    <span className="hover:text-[#22C55E] transition-colors duration-300">Data</span>{' '}
                     that <span className="text-white font-medium">informs</span> instead of overwhelms.
                   </p>
                 </div>
                 <div className="flex items-start hover:translate-x-1 transition-all duration-300">
-                  <span className="text-[#99CC00] mr-4 text-xl mt-1">→</span>
+                  <span className="text-[#22C55E] mr-4 text-xl mt-1">→</span>
                   <p className="text-xl text-gray-100 font-light">
-                    <span className="hover:text-[#99CC00] transition-colors duration-300">Processes</span>{' '}
+                    <span className="hover:text-[#22C55E] transition-colors duration-300">Processes</span>{' '}
                     that create <span className="text-white font-medium">speed</span> instead of friction.
                   </p>
                 </div>
@@ -92,7 +92,7 @@ export default function AboutPage() {
           <div className="mb-16 text-center">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-8" style={{ fontFamily: 'Poppins' }}>
               Deep Sight exists to build the{' '}
-              <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">intelligent tissue</span>{' '}
+              <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">intelligent tissue</span>{' '}
               between systems.
             </h3>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto">
@@ -103,8 +103,8 @@ export default function AboutPage() {
 
           {/* Timeline */}
           <div className="space-y-12">
-            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition-all duration-500">
-              <h4 className="text-xl font-bold text-[#99CC00] mb-4" style={{ fontFamily: 'Poppins' }}>
+            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500">
+              <h4 className="text-xl font-bold text-[#22C55E] mb-4" style={{ fontFamily: 'Poppins' }}>
                 Today
               </h4>
               <p className="text-lg text-gray-300 leading-relaxed">
@@ -113,8 +113,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#76B900]/30 transition-all duration-500">
-              <h4 className="text-xl font-bold text-[#76B900] mb-4" style={{ fontFamily: 'Poppins' }}>
+            <div className="group p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500">
+              <h4 className="text-xl font-bold text-[#22C55E] mb-4" style={{ fontFamily: 'Poppins' }}>
                 Tomorrow
               </h4>
               <p className="text-lg text-gray-300 leading-relaxed">
@@ -123,8 +123,8 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="group p-8 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/50 transition-all duration-500">
-              <h4 className="text-xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent mb-4" style={{ fontFamily: 'Poppins' }}>
+            <div className="group p-8 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/50 transition-all duration-500">
+              <h4 className="text-xl font-bold bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent mb-4" style={{ fontFamily: 'Poppins' }}>
                 The Endgame
               </h4>
               <p className="text-lg text-gray-200 leading-relaxed">
@@ -146,7 +146,7 @@ export default function AboutPage() {
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
               <button
                 onClick={() => (window.location.href = '/#services')}
-                className="px-10 py-5 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition text-xl"
+                className="px-10 py-5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold transition text-xl"
                 style={{ fontFamily: 'Poppins' }}
               >
                 See Our Approach →
@@ -167,7 +167,7 @@ export default function AboutPage() {
       <footer className="bg-black border-t border-gray-800 py-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="text-center">
-            <h4 className="text-3xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent mb-4">
+            <h4 className="text-3xl font-bold bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent mb-4">
               Deep Sight
             </h4>
             <p className="text-gray-400">Professional technology consulting for family offices</p>

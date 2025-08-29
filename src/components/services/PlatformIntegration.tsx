@@ -169,24 +169,24 @@ export default function PlatformIntegration() {
         
         {/* Connection lines */}
         <g className="connections" opacity="0.3">
-          <line x1="80" y1="80" x2="320" y2="80" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="80" y1="80" x2="200" y2="125" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="320" y1="80" x2="200" y2="40" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="200" y1="125" x2="320" y2="80" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="80" y1="170" x2="200" y2="125" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="200" y1="125" x2="320" y2="170" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
-          <line x1="200" y1="40" x2="320" y2="170" stroke="#99CC00" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="80" y1="80" x2="320" y2="80" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="80" y1="80" x2="200" y2="125" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="320" y1="80" x2="200" y2="40" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="200" y1="125" x2="320" y2="80" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="80" y1="170" x2="200" y2="125" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="200" y1="125" x2="320" y2="170" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
+          <line x1="200" y1="40" x2="320" y2="170" stroke="#22C55E" strokeWidth="1" strokeDasharray="2,4"/>
         </g>
         
         {/* Active flow highlights */}
         {activeFlow === 'crm-erp' && (
-          <line x1="80" y1="80" x2="320" y2="80" stroke="#99CC00" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
+          <line x1="80" y1="80" x2="320" y2="80" stroke="#22C55E" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
         )}
         {activeFlow === 'crm-api' && (
-          <line x1="80" y1="80" x2="200" y2="125" stroke="#99CC00" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
+          <line x1="80" y1="80" x2="200" y2="125" stroke="#22C55E" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
         )}
         {activeFlow === 'db-api' && (
-          <line x1="80" y1="170" x2="200" y2="125" stroke="#99CC00" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
+          <line x1="80" y1="170" x2="200" y2="125" stroke="#22C55E" strokeWidth="2" opacity="0.8" className="animate-pulse"/>
         )}
         
         {/* Platform boxes */}
@@ -200,11 +200,11 @@ export default function PlatformIntegration() {
               rx="5"
               fill={
                 warningPlatform === platform.id ? '#FF4444' :
-                platform.status === 'optimized' ? '#0E613C' : '#1a1a1a'
+                platform.status === 'optimized' ? '#16A34A' : '#1a1a1a'
               }
               stroke={
                 warningPlatform === platform.id ? '#FF4444' :
-                platform.status === 'optimized' ? '#99CC00' : '#76B900'
+                platform.status === 'optimized' ? '#22C55E' : '#22C55E'
               }
               strokeWidth="1.5"
               filter={warningPlatform === platform.id ? 'url(#warningGlow)' : 'url(#platformGlow)'}
@@ -216,7 +216,7 @@ export default function PlatformIntegration() {
               y="0"
               textAnchor="middle"
               dominantBaseline="middle"
-              fill={warningPlatform === platform.id ? '#FFFFFF' : '#99CC00'}
+              fill={warningPlatform === platform.id ? '#FFFFFF' : '#22C55E'}
               fontSize="11"
               fontFamily="monospace"
               fontWeight="bold"
@@ -224,7 +224,7 @@ export default function PlatformIntegration() {
               {platform.name}
             </text>
             {platform.status === 'optimized' && warningPlatform !== platform.id && (
-              <circle cx="20" cy="-10" r="3" fill="#99CC00" className="animate-pulse"/>
+              <circle cx="20" cy="-10" r="3" fill="#22C55E" className="animate-pulse"/>
             )}
           </g>
         ))}
@@ -233,7 +233,7 @@ export default function PlatformIntegration() {
         <g className="particles"></g>
         
         {/* Central hub indicator */}
-        <circle cx="200" cy="125" r="35" stroke="#99CC00" strokeWidth="0.5" strokeDasharray="5,10" fill="none" opacity="0.2">
+        <circle cx="200" cy="125" r="35" stroke="#22C55E" strokeWidth="0.5" strokeDasharray="5,10" fill="none" opacity="0.2">
           <animateTransform
             attributeName="transform"
             attributeType="XML"
@@ -253,7 +253,7 @@ export default function PlatformIntegration() {
         )}
         
         {/* Title */}
-        <text x="20" y="15" fill="#99CC00" fontSize="11" fontFamily="monospace" opacity="0.8">
+        <text x="20" y="15" fill="#22C55E" fontSize="11" fontFamily="monospace" opacity="0.8">
           PLATFORM MESH
         </text>
       </svg>
