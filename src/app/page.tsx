@@ -1,6 +1,5 @@
 'use client';
 import Link from 'next/link';
-import Image from 'next/image';
 import Header from '@/components/Header';
 
 import PlatformIntegration from '@/components/services/PlatformIntegration';
@@ -10,19 +9,17 @@ import AdaptiveDataArchitecture from '@/components/services/AdaptiveDataArchitec
 export default function Home() {
   return (
     <div className="bg-black">
-      {/* Header (single source of truth) */}
-      <Header />
+      {/* Header */}
+      <Header />   {/* ✅ use the new component instead of hand-coded header */}
 
       {/* Hero Section with Singapore Image */}
       <section className="relative h-screen">
-        {/* Background Image (Next/Image) */}
-        <div className="absolute inset-0 relative">
-          <Image
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img
             src="/images/singapore-skyline.png"
             alt="Singapore skyline"
-            fill
-            priority
-            className="object-cover"
+            className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
@@ -47,26 +44,43 @@ export default function Home() {
                 <stop offset="100%" stopColor="#99CC00" stopOpacity="0" />
               </linearGradient>
             </defs>
-            <path d="M0 400 Q300 200 600 400 T1200 400" stroke="url(#flowGradient1)" strokeWidth="2" className="animate-pulse" />
-            <path d="M0 450 Q400 250 800 450 T1200 450" stroke="url(#flowGradient2)" strokeWidth="1.5" className="animate-pulse" style={{ animationDelay: '1s' }} />
-            <path d="M0 350 Q250 150 500 350 T1200 350" stroke="url(#flowGradient3)" strokeWidth="1" className="animate-pulse" style={{ animationDelay: '2s' }} />
+            <path
+              d="M0 400 Q300 200 600 400 T1200 400"
+              stroke="url(#flowGradient1)"
+              strokeWidth="2"
+              className="animate-pulse"
+            />
+            <path
+              d="M0 450 Q400 250 800 450 T1200 450"
+              stroke="url(#flowGradient2)"
+              strokeWidth="1.5"
+              className="animate-pulse"
+              style={{animationDelay: '1s'}}
+            />
+            <path
+              d="M0 350 Q250 150 500 350 T1200 350"
+              stroke="url(#flowGradient3)"
+              strokeWidth="1"
+              className="animate-pulse"
+              style={{animationDelay: '2s'}}
+            />
           </svg>
         </div>
 
-        {/* Hero Content */}
+        {/* Hero Content - Header in sky, content lower */}
         <div className="relative z-10 h-full">
           <div className="flex flex-col h-full">
-            {/* Headline */}
+            {/* Header positioned in upper third */}
             <div className="flex-1 flex items-center justify-center pt-20">
               <h2 className="text-6xl md:text-7xl font-bold leading-tight text-white text-center">
-                The{' '}
+                The{" "}
                 <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
                   seamless system.
                 </span>
               </h2>
             </div>
-
-            {/* Subcopy + CTA */}
+            
+            {/* Content positioned in lower section */}
             <div className="flex-1 flex items-end justify-center pb-20">
               <div className="text-center px-6">
                 <p className="text-3xl text-gray-200 mb-6 max-w-3xl mx-auto font-medium hero-tagline">
@@ -79,12 +93,12 @@ export default function Home() {
                   Integrations that learn your business. Not platforms you learn to manage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <Link
-                    href="/#contact"
+                  <button 
+                    onClick={() => window.location.href='#contact'}
                     className="px-10 py-5 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition text-xl hero-tagline"
                   >
                     Book a Consultation →
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -110,7 +124,7 @@ export default function Home() {
             <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
                   <p className="text-gray-200 text-xl leading-relaxed">
@@ -118,12 +132,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#76B900' }}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
                   <p className="text-white text-xl font-semibold leading-relaxed">
@@ -136,7 +150,7 @@ export default function Home() {
             <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
                   <p className="text-gray-200 text-xl leading-relaxed">
@@ -144,12 +158,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#76B900' }}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
                   <p className="text-white text-xl font-semibold leading-relaxed">
@@ -162,7 +176,7 @@ export default function Home() {
             <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#99CC00]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#99CC00]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
                   <p className="text-gray-200 text-xl leading-relaxed">
@@ -170,12 +184,12 @@ export default function Home() {
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{ backgroundColor: '#76B900' }}>
+                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#76B900'}}>
                     <span className="text-white font-bold text-3xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{ fontFamily: 'Poppins' }}>
+                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
                   <p className="text-white text-xl font-semibold leading-relaxed">
@@ -187,69 +201,74 @@ export default function Home() {
           </div>
 
           <div className="text-center mt-20">
-            <Link
-              href="/#services"
-              className="px-10 py-5 rounded-xl border-2 border-[#76B900] text-white hover:bg-[#76B900]/10 transition text-2xl font-semibold"
-              style={{ fontFamily: 'Poppins' }}
+            <button 
+              onClick={() => window.location.href='#services'}
+              className="px-10 py-5 rounded-xl border-2 border-[#76B900] text-white hover:bg-[#76B900]/10 transition text-2xl font-semibold" 
+              style={{fontFamily: 'Poppins'}}
             >
               See how we deliver this → Services
-            </Link>
+            </button>
           </div>
         </div>
       </div>
 
-      {/* Services */}
       <section id="services" className="bg-black py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
-                Intelligent Integration Services
-              </span>
-            </h3>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+        <div className="text-center mb-20">
+          <h3 className="text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+              Intelligent Integration Services
+            </span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Self-learning connections that get smarter daily
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Platform Integration */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <PlatformIntegration />
+            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
               Self-learning connections that get smarter daily
+            </p>
+            <p className="text-gray-300">
+              Your integrations improve themselves — catching errors, optimizing paths, and predicting failures before they happen.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Platform Integration */}
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
-              <div className="mb-6">
-                <PlatformIntegration />
-              </div>
-              <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
-              <p className="text-[#99CC00]/90 italic mb-4">Self-learning connections that get smarter daily</p>
-              <p className="text-gray-300">
-                Your integrations improve themselves — catching errors, optimizing paths, and predicting failures before they happen.
-              </p>
+          {/* Automated Intelligence */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <AutomatedIntelligence />
             </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
+              Reports that think, not just display
+            </p>
+            <p className="text-gray-300">
+              Living dashboards that learn what matters, surface anomalies, and explain what changed — and why.
+            </p>
+          </div>
 
-            {/* Automated Intelligence */}
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
-              <div className="mb-6">
-                <AutomatedIntelligence />
-              </div>
-              <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
-              <p className="text-[#99CC00]/90 italic mb-4">Reports that think, not just display</p>
-              <p className="text-gray-300">
-                Living dashboards that learn what matters, surface anomalies, and explain what changed — and why.
-              </p>
+          {/* Adaptive Data Architecture */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <AdaptiveDataArchitecture />
             </div>
-
-            {/* Adaptive Data Architecture */}
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
-              <div className="mb-6">
-                <AdaptiveDataArchitecture />
-              </div>
-              <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
-              <p className="text-[#99CC00]/90 italic mb-4">Data structures that evolve with your business</p>
-              <p className="text-gray-300">
-                Intelligent schemas that adapt to new sources, heal broken mappings, and maintain themselves.
-              </p>
-            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
+              Data structures that evolve with your business
+            </p>
+            <p className="text-gray-300">
+              Intelligent schemas that adapt to new sources, heal broken mappings, and maintain themselves.
+            </p>
           </div>
         </div>
+      </div>
       </section>
 
       {/* Contact Section */}
@@ -257,21 +276,21 @@ export default function Home() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="p-12 rounded-3xl bg-white/5 backdrop-blur border border-white/10">
             <h3 className="text-5xl font-bold mb-6">
-              Ready to{' '}
+              Ready to{" "}
               <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
                 Transform
-              </span>{' '}
+              </span>{" "}
               Your Operations?
             </h3>
             <p className="text-xl text-gray-300 mb-10">
               Let&#39;s discuss how to remove silos and create flow across your systems and data.
             </p>
-            <a
-              href="mailto:contact@deepsight.com"
-              className="inline-block px-8 py-4 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 text-lg transition"
+            <button 
+              onClick={() => window.location.href='mailto:contact@deepsight.com'}
+              className="px-8 py-4 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 text-lg transition"
             >
               Book a Consultation
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -283,8 +302,12 @@ export default function Home() {
             <h4 className="text-3xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent mb-4">
               Deep Sight
             </h4>
-            <p className="text-gray-400">Professional technology consulting for family offices</p>
-            <p className="text-gray-500 mt-2">© 2025 Deep Sight. All rights reserved.</p>
+            <p className="text-gray-400">
+              Professional technology consulting for family offices
+            </p>
+            <p className="text-gray-500 mt-2">
+              © 2025 Deep Sight. All rights reserved.
+            </p>
           </div>
         </div>
       </footer>
