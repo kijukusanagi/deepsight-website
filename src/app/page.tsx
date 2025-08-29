@@ -116,7 +116,7 @@ export default function Home() {
                   No silos. No friction. Just flow.
                 </p>
                 <p className="text-xl text-gray-300 mb-3 max-w-4xl mx-auto leading-relaxed">
-                  We&#39;re building middleware from the future — where tedious manual work dissolves into intelligent automation.
+                  We build middleware that evolves — where tedious manual work dissolves into intelligent automation.
                 </p>
                 <p className="text-xl text-white font-bold mb-10 max-w-4xl mx-auto leading-relaxed">
                   Integrations that learn your business. Not platforms you learn to manage.
