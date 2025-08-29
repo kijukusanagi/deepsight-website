@@ -7,16 +7,16 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="relative z-50 bg-black/20 backdrop-blur border-b border-white/10">
+    <header className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="flex items-center justify-between py-6">
+        <div className="flex items-center justify-between py-4">
           {/* Logo */}
           <Link href="/" className="flex items-center">
             <div
-              className="w-10 h-10 rounded-lg mr-3"
+              className="w-9 h-9 rounded-lg mr-3"
               style={{ background: 'linear-gradient(135deg, #0E613C 0%, #99CC00 100%)' }}
             />
-            <span className="text-2xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+            <span className="text-xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
               Deep Sight
             </span>
           </Link>
@@ -38,21 +38,21 @@ export default function Header() {
           {/* Mobile hamburger */}
           <button
             type="button"
+            aria-label="Toggle menu"
             aria-controls="mobile-menu"
             aria-expanded={open}
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen((v) => !v)}
             className="md:hidden inline-flex items-center justify-center rounded-lg p-2 text-gray-200 hover:bg-white/10 focus:outline-none focus:ring-2 focus:ring-white/30"
           >
-            <span className="sr-only">Toggle navigation</span>
-            {!open ? (
-              // Hamburger
+            {open ? (
+              /* X icon */
               <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-                <path d="M3 6h18v2H3V6Zm0 5h18v2H3v-2Zm0 5h18v2H3v-2Z" />
+                <path d="M18.3 5.7 12 12l-6.3-6.3-1.4 1.4L10.6 13l-6.3 6.3 1.4 1.4L12 14.4l6.3 6.3 1.4-1.4L13.4 13l6.3-6.3-1.4-1.4Z" />
               </svg>
             ) : (
-              // Close (X)
+              /* Hamburger icon */
               <svg width="24" height="24" viewBox="0 0 24 24" className="fill-current">
-                <path d="M18.3 5.71 12 12.01l-6.29-6.3-1.41 1.42 6.29 6.29-6.3 6.29 1.42 1.41 6.29-6.29 6.29 6.29 1.41-1.41-6.29-6.29 6.29-6.29-1.41-1.42Z" />
+                <path d="M3 6h18v2H3zM3 11h18v2H3zM3 16h18v2H3z" />
               </svg>
             )}
           </button>
@@ -60,32 +60,18 @@ export default function Header() {
       </div>
 
       {/* Mobile panel */}
-      {open && (
-        <div
-          id="mobile-menu"
-          className="md:hidden absolute inset-x-0 top-full bg-black/95 border-t border-white/10 shadow-xl"
-        >
+      <div
+        id="mobile-menu"
+        className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
+          open ? 'max-h-96' : 'max-h-0'
+        }`}
+      >
+        <div className="bg-black/95 border-t border-white/10 shadow-xl">
           <div className="px-6 py-4 space-y-2">
-            <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10"
-              onClick={() => setOpen(false)}
-            >
-              Home
-            </Link>
-            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10"
-              onClick={() => setOpen(false)}
-            >
-              Services
-            </Link>
-            <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10"
-              onClick={() => setOpen(false)}
-            >
-              About
-            </Link>
-            <Link href="/#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10"
-              onClick={() => setOpen(false)}
-            >
-              Contact
-            </Link>
+            <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Home</Link>
+            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Services</Link>
+            <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>About</Link>
+            <Link href="/#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Contact</Link>
             <Link
               href="/#contact"
               className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
@@ -95,7 +81,7 @@ export default function Header() {
             </Link>
           </div>
         </div>
-      )}
+      </div>
     </header>
   );
 }

@@ -1,10 +1,12 @@
 'use client';
 import Link from 'next/link';
+import Header from '@/components/Header';
 
 export default function AboutPage() {
   return (
     <div className="bg-black">
       {/* Header */}
+      <Header />   {/* ✅ use the new component instead of hand-coded header */}
       <header className="relative z-50 bg-black/20 backdrop-blur border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <div className="flex justify-between items-center py-6">
