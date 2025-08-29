@@ -26,15 +26,15 @@ export default function AboutPage() {
                 <Link href="/" className="text-gray-300 hover:text-white transition-colors">
                   Home
                 </Link>
-                <a href="/#services" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/#services" className="text-gray-300 hover:text-white transition-colors">
                   Services
-                </a>
+                </Link>
                 <Link href="/about" className="text-white transition-colors">
                   About
                 </Link>
-                <a href="/#contact" className="text-gray-300 hover:text-white transition-colors">
+                <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">
                   Contact
-                </a>
+                </Link>
               </nav>
               <button
                 onClick={() => (window.location.href = '/#contact')}
