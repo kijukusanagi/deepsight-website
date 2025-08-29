@@ -2,9 +2,11 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
 
   return (
     <header className="sticky top-0 z-50 bg-black/70 backdrop-blur border-b border-white/10">
@@ -23,9 +25,9 @@ export default function Header() {
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
+            <button onClick={() => router.push('/')} className="text-gray-300 hover:text-white transition-colors">Home</button>
             <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
+            <button onClick={() => router.push('/about')} className="text-gray-300 hover:text-white transition-colors">About</button>
             <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
             <a
               href="#contact"
@@ -68,9 +70,9 @@ export default function Header() {
       >
         <div className="bg-black/95 border-t border-white/10 shadow-xl">
           <div className="px-6 py-4 space-y-2">
-            <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Home</Link>
+            <button onClick={() => { router.push('/'); setOpen(false); }} className="block w-full text-left px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10">Home</button>
             <a href="#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Services</a>
-            <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>About</Link>
+            <button onClick={() => { router.push('/about'); setOpen(false); }} className="block w-full text-left px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10">About</button>
             <a href="#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Contact</a>
             <a
               href="#contact"
