@@ -16,20 +16,21 @@ export default function Header() {
               className="w-9 h-9 rounded-lg mr-3"
               style={{ background: 'linear-gradient(135deg, #0E613C 0%, #99CC00 100%)' }}
             />
-            <span className="text-xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+            <span className="text-2xl font-light text-[#99CC00] tracking-wide" style={{ fontFamily: 'Raleway' }}>
               Deep Sight
             </span>
           </Link>
 
           {/* Desktop nav */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
-            <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-            <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
+          <nav className="hidden md:flex items-center space-x-8" style={{ fontFamily: 'Raleway' }}>
+            <Link href="/" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Home</Link>
+            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Services</Link>
+            <Link href="/about" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">About</Link>
+            <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Contact</Link>
             <Link
               href="/#contact"
-              className="px-4 py-2 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
+              className="px-4 py-2 rounded-xl bg-[#76B900] text-black font-medium hover:brightness-110 transition tracking-wide"
+              style={{ fontFamily: 'Raleway' }}
             >
               Get Started
             </Link>
@@ -66,23 +67,23 @@ export default function Header() {
           open ? 'max-h-96' : 'max-h-0'
         }`}
       >
-        <div className="bg-black/95 border-t border-white/10 shadow-xl">
+        <div className="bg-black/95 border-t border-white/10 shadow-xl" style={{ fontFamily: 'Raleway' }}>
           <div className="px-6 py-4 space-y-2">
-            <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>
+            <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>
+            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               Services
             </Link>
-            <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>
+            <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               About
             </Link>
-            <Link href="/#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>
+            <Link href="/#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               Contact
             </Link>
             <Link
               href="/#contact"
-              className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
+              className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#76B900] text-black font-medium hover:brightness-110 transition tracking-wide"
               onClick={() => setOpen(false)}
             >
               Get Started
