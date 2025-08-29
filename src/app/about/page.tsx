@@ -1,8 +1,70 @@
 'use client';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import { useEffect, useRef } from 'react';
 
 export default function AboutPage() {
+  const textRef = useRef<HTMLSpanElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const isHovering = useRef<boolean>(false);
+
+  useEffect(() => {
+    // Trigger effect automatically when page loads
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              if (textRef.current) {
+                textRef.current.classList.add('text-glow-wave');
+              }
+            }, 500);
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (textRef.current) {
+      observer.observe(textRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
+
+  const handleMouseEnter = () => {
+    if (textRef.current) {
+      isHovering.current = true;
+      
+      // Clear any existing timeout
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+      
+      // Remove class first to reset animation
+      textRef.current.classList.remove('text-glow-wave');
+      
+      // Delay to ensure smooth reset
+      timeoutRef.current = setTimeout(() => {
+        if (textRef.current && isHovering.current) {
+          textRef.current.classList.add('text-glow-wave');
+        }
+      }, 150);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    isHovering.current = false;
+    
+    // Clear any existing timeout
+    if (timeoutRef.current) {
+      clearTimeout(timeoutRef.current);
+    }
+    
+    // Let animation complete naturally, don't remove class
+  };
+
   return (
     <div className="bg-black">
       {/* Header */}
@@ -22,7 +84,12 @@ export default function AboutPage() {
               Deep Sight was founded on one principle:
             </h2>
             <p className="text-5xl md:text-7xl font-bold tracking-tight" style={{ fontFamily: 'Poppins' }}>
-              <span className="bg-gradient-to-r from-[#22C55E] via-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
+              <span 
+                ref={textRef}
+                className="bg-gradient-to-r from-[#22C55E] via-[#22C55E] to-[#16A34A] bg-clip-text text-transparent cursor-pointer"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 clarity in flow.
               </span>
             </p>
