@@ -247,13 +247,8 @@ export default function PlatformIntegration() {
         
         {/* Status messages */}
         {reroutingFlow && (
-          <text x="200" y="20" textAnchor="middle" fill="#00CCFF" fontSize="10" fontFamily="monospace" className="animate-pulse">
+          <text x="200" y="205" textAnchor="middle" fill="#00CCFF" fontSize="10" fontFamily="monospace" className="animate-pulse">
             OPTIMIZING DATA FLOW
-          </text>
-        )}
-        {warningPlatform && (
-          <text x="200" y="230" textAnchor="middle" fill="#FF4444" fontSize="10" fontFamily="monospace" className="animate-pulse">
-            REROUTING • SELF-HEALING
           </text>
         )}
         

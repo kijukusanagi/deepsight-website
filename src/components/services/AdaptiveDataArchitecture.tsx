@@ -50,7 +50,7 @@ export default function AdaptiveDataArchitecture() {
     ];
     
     const animate = () => {
-      t += 0.025;
+      t += 0.010;
       
       // Cycle status messages
       if (t > nextStatusChange) {
