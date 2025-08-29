@@ -145,7 +145,7 @@ export default function PlatformIntegration() {
     };
     
     animate();
-  }, [activeFlow, warningPlatform, reroutingFlow]);
+  }, []);
 
   return (
     <div className="relative w-full h-48">

@@ -279,7 +279,7 @@ export default function AdaptiveDataArchitecture() {
     };
     
     animate();
-  }, [growingConnection, healingConnection]);
+  }, []);
 
   return (
     <div className="relative w-full h-48">
