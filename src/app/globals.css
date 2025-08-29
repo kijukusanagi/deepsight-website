@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply antialiased bg-black text-white overflow-x-hidden;
+  }
+  
+  h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  h1 {
+    font-family: 'Raleway', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .hero-tagline {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  .stats-text {
+    font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    font-weight: 600;
+  }
+}
+
+@layer components {
+  .gradient-text {
+    background: linear-gradient(135deg, #0E613C 0%, #99CC00 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(153, 204, 0, 0.2);
+    border-radius: 16px;
+  }
+  
+  .btn-primary {
+    @apply relative overflow-hidden text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+    background: linear-gradient(135deg, #0E613C 0%, #99CC00 50%, #76B900 100%);
+    box-shadow: 0 10px 30px rgba(153, 204, 0, 0.3);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 15px 40px rgba(153, 204, 0, 0.4);
+  }
+  
+  .btn-secondary {
+    @apply glass-card text-white font-semibold py-4 px-8 rounded-full transition-all duration-300 hover:scale-105;
+    border: 1px solid rgba(118, 185, 0, 0.3);
+  }
+  
+  .btn-secondary:hover {
+    background: rgba(118, 185, 0, 0.1);
+    border-color: rgba(118, 185, 0, 0.5);
+  }
+  
+  .floating {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .glow-effect {
+    box-shadow: 0 0 30px rgba(153, 204, 0, 0.3);
+  }
+  
+  .accent-card-1 {
+    border: 1px solid rgba(14, 97, 60, 0.3);
+    background: linear-gradient(135deg, rgba(14, 97, 60, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  
+  .accent-card-2 {
+    border: 1px solid rgba(118, 185, 0, 0.3);
+    background: linear-gradient(135deg, rgba(118, 185, 0, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  
+  .accent-card-3 {
+    border: 1px solid rgba(74, 20, 140, 0.3);
+    background: linear-gradient(135deg, rgba(74, 20, 140, 0.1) 0%, rgba(0, 0, 0, 0.8) 100%);
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-slide {
+    animation: fadeInSlide 0.5s ease-out forwards;
+  }
+  
+  .animate-fade-in-delay-1 {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.3s forwards;
+  }
+  
+  .animate-fade-in-delay-2 {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.5s forwards;
+  }
+  
+  .animate-fade-in-delay-3 {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-out 0.7s forwards;
+  }
+  
+  .animate-fade-in-delay-4 {
+    opacity: 0;
+    animation: fadeIn 1s ease-out 1s forwards;
+  }
+  
+  .animate-slide-in-1 {
+    opacity: 0;
+    animation: fadeInSlide 0.5s ease-out 0.3s forwards;
+  }
+  
+  .animate-slide-in-2 {
+    opacity: 0;
+    animation: fadeInSlide 0.5s ease-out 0.5s forwards;
+  }
+  
+  .animate-slide-in-3 {
+    opacity: 0;
+    animation: fadeInSlide 0.5s ease-out 0.7s forwards;
+  }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  33% { transform: translateY(-10px) rotate(1deg); }
+  66% { transform: translateY(5px) rotate(-1deg); }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(153, 204, 0, 0.4); }
+  50% { box-shadow: 0 0 40px rgba(153, 204, 0, 0.8); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInSlide {
+  from { 
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
