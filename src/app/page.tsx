@@ -249,9 +249,16 @@ export default function Home() {
               Intelligent Integration Services
             </span>
           </h3>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
             Self-learning connections that get smarter daily
           </p>
+          <Link 
+            href="/services"
+            className="inline-block px-8 py-3 rounded-xl border-2 border-[#76B900] text-[#76B900] hover:bg-[#76B900]/10 transition text-lg font-medium"
+            style={{ fontFamily: 'Raleway' }}
+          >
+            Services
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
