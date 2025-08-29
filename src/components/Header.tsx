@@ -24,15 +24,15 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-8">
             <Link href="/" className="text-gray-300 hover:text-white transition-colors">Home</Link>
-            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors">Services</Link>
+            <a href="#services" className="text-gray-300 hover:text-white transition-colors">Services</a>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors">About</Link>
-            <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors">Contact</Link>
-            <Link
-              href="/#contact"
+            <a href="#contact" className="text-gray-300 hover:text-white transition-colors">Contact</a>
+            <a
+              href="#contact"
               className="px-4 py-2 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
             >
               Get Started
-            </Link>
+            </a>
           </nav>
 
           {/* Mobile hamburger */}
@@ -69,16 +69,16 @@ export default function Header() {
         <div className="bg-black/95 border-t border-white/10 shadow-xl">
           <div className="px-6 py-4 space-y-2">
             <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Home</Link>
-            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Services</Link>
+            <a href="#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Services</a>
             <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>About</Link>
-            <Link href="/#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Contact</Link>
-            <Link
-              href="/#contact"
+            <a href="#contact" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10" onClick={() => setOpen(false)}>Contact</a>
+            <a
+              href="#contact"
               className="mt-2 block text-center px-4 py-3 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
               onClick={() => setOpen(false)}
             >
               Get Started
-            </Link>
+            </a>
           </div>
         </div>
       </div>
