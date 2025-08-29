@@ -1,4 +1,5 @@
 'use client';
+import Link from 'next/link';
 
 export default function Home() {
   return (
@@ -20,18 +21,21 @@ export default function Home() {
             </div>
             <div className="flex items-center space-x-8">
               <nav className="hidden md:flex space-x-8">
-                <a href="/" className="text-white transition-colors">
-                  Home
-                </a>
-                <a href="#services" className="text-gray-300 hover:text-white transition-colors">
-                  Services
-                </a>
-                <a href="/about" className="text-gray-300 hover:text-white transition-colors">
-                  About
-                </a>
-                <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
-                  Contact
-                </a>
+              <Link href="/" className="text-white transition-colors">
+                Home
+              </Link>
+
+              <a href="#services" className="text-gray-300 hover:text-white transition-colors">
+                Services
+              </a>
+
+              <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
+                About
+              </Link>
+
+              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
+                Contact
+              </a>
               </nav>
               <button 
                 onClick={() => window.location.href='#contact'}
@@ -119,7 +123,7 @@ export default function Home() {
                   No silos. No friction. Just flow.
                 </p>
                 <p className="text-xl text-gray-300 mb-3 max-w-4xl mx-auto leading-relaxed">
-                  We're building middleware from the future — where tedious manual work dissolves into intelligent automation.
+                  We&#39;re building middleware from the future — where tedious manual work dissolves into intelligent automation.
                 </p>
                 <p className="text-xl text-white font-bold mb-10 max-w-4xl mx-auto leading-relaxed">
                   Integrations that learn your business. Not platforms you learn to manage.
@@ -293,7 +297,7 @@ export default function Home() {
               Your Operations?
             </h3>
             <p className="text-xl text-gray-300 mb-10">
-              Let's discuss how to remove silos and create flow across your systems and data.
+              Let&#39;s discuss how to remove silos and create flow across your systems and data.
             </p>
             <button 
               onClick={() => window.location.href='mailto:contact@deepsight.com'}
