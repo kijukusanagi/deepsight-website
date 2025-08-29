@@ -49,21 +49,50 @@ export default function Home() {
               stroke="url(#flowGradient1)"
               strokeWidth="2"
               className="animate-pulse"
-            />
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                values="0,0; 0,-8; 0,0; 0,8; 0,0"
+                dur="12s"
+                repeatCount="indefinite"
+              />
+            </path>
             <path
               d="M0 450 Q400 250 800 450 T1200 450"
               stroke="url(#flowGradient2)"
               strokeWidth="1.5"
               className="animate-pulse"
               style={{animationDelay: '1s'}}
-            />
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                values="0,0; 0,10; 0,0; 0,-6; 0,0"
+                dur="15s"
+                repeatCount="indefinite"
+                begin="2s"
+              />
+            </path>
             <path
               d="M0 350 Q250 150 500 350 T1200 350"
               stroke="url(#flowGradient3)"
               strokeWidth="1"
               className="animate-pulse"
               style={{animationDelay: '2s'}}
-            />
+            >
+              <animateTransform
+                attributeName="transform"
+                attributeType="XML"
+                type="translate"
+                values="0,0; 0,6; 0,0; 0,-10; 0,0"
+                dur="18s"
+                repeatCount="indefinite"
+                begin="4s"
+              />
+            </path>
           </svg>
         </div>
 
