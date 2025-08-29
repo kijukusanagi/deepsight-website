@@ -7,48 +7,6 @@ export default function Home() {
     <div className="bg-black">
       {/* Header */}
       <Header />   {/* ✅ use the new component instead of hand-coded header */}
-      <header className="relative z-50 bg-black/20 backdrop-blur border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="flex justify-between items-center py-6">
-            <div className="flex items-center">
-              <div
-                className="w-10 h-10 rounded-lg mr-3"
-                style={{
-                  background: "linear-gradient(135deg, #0E613C 0%, #99CC00 100%)",
-                }}
-              />
-              <h1 className="text-2xl font-bold bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
-                Deep Sight
-              </h1>
-            </div>
-            <div className="flex items-center space-x-8">
-              <nav className="hidden md:flex space-x-8">
-              <Link href="/" className="text-white transition-colors">
-                Home
-              </Link>
-
-              <a href="#services" className="text-gray-300 hover:text-white transition-colors">
-                Services
-              </a>
-
-              <Link href="/about" className="text-gray-300 hover:text-white transition-colors">
-                About
-              </Link>
-
-              <a href="#contact" className="text-gray-300 hover:text-white transition-colors">
-                Contact
-              </a>
-              </nav>
-              <button 
-                onClick={() => window.location.href='#contact'}
-                className="px-4 py-2 rounded-xl bg-[#76B900] text-black font-semibold hover:brightness-110 transition"
-              >
-                Get Started
-              </button>
-            </div>
-          </div>
-        </div>
-      </header>
 
       {/* Hero Section with Singapore Image */}
       <section className="relative h-screen">
