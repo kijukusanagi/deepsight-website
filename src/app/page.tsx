@@ -2,6 +2,10 @@
 import Link from 'next/link';
 import Header from '@/components/Header';
 
+import PlatformIntegration from '@/components/services/PlatformIntegration';
+import AutomatedIntelligence from '@/components/services/AutomatedIntelligence';
+import AdaptiveDataArchitecture from '@/components/services/AdaptiveDataArchitecture';
+
 export default function Home() {
   return (
     <div className="bg-black">
@@ -208,42 +212,64 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Services Section */}
-      <div className="bg-black py-32" id="services">
+      <section id="services" className="bg-black py-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="text-center mb-20">
-            <h3 className="text-5xl font-bold mb-6">
-              <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
-                Consulting Services
-              </span>
-            </h3>
-            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-              Comprehensive technology solutions designed for complex operations
+        <div className="text-center mb-20">
+          <h3 className="text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-[#99CC00] to-[#0E613C] bg-clip-text text-transparent">
+              Intelligent Integration Services
+            </span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Self-learning connections that get smarter daily
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Platform Integration */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <PlatformIntegration />
+            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
+              Self-learning connections that get smarter daily
+            </p>
+            <p className="text-gray-300">
+              Your integrations improve themselves — catching errors, optimizing paths, and predicting failures before they happen.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10">
-              <h4 className="text-2xl font-bold mb-4 text-white">Platform Integration</h4>
-              <p className="text-gray-300">
-                Make existing systems work together — without rip-and-replace.
-              </p>
+          {/* Automated Intelligence */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <AutomatedIntelligence />
             </div>
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10">
-              <h4 className="text-2xl font-bold mb-4 text-white">Automated Reporting</h4>
-              <p className="text-gray-300">
-                Real-time dashboards that replace manual reporting cycles.
-              </p>
+            <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
+              Reports that think, not just display
+            </p>
+            <p className="text-gray-300">
+              Living dashboards that learn what matters, surface anomalies, and explain what changed — and why.
+            </p>
+          </div>
+
+          {/* Adaptive Data Architecture */}
+          <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#99CC00]/30 transition">
+            <div className="mb-6">
+              <AdaptiveDataArchitecture />
             </div>
-            <div className="p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10">
-              <h4 className="text-2xl font-bold mb-4 text-white">Data Structuring</h4>
-              <p className="text-gray-300">
-                Turn massive, scattered data into a coherent view for decisions.
-              </p>
-            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
+            <p className="text-[#99CC00]/90 italic mb-4">
+              Data structures that evolve with your business
+            </p>
+            <p className="text-gray-300">
+              Intelligent schemas that adapt to new sources, heal broken mappings, and maintain themselves.
+            </p>
           </div>
         </div>
       </div>
+      </section>
 
       {/* Contact Section */}
       <div className="bg-black py-32" id="contact">
