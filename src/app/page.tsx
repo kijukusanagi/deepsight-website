@@ -146,7 +146,7 @@ export default function Home() {
       </section>
 
       {/* Integration Description Section */}
-      <div className="bg-black py-48">
+      <div className="bg-black pt-48 pb-24">
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <p className="text-2xl md:text-3xl text-gray-200 leading-relaxed text-center font-light">
             We unify platforms and data through a single integration layer — 
@@ -157,7 +157,7 @@ export default function Home() {
       </div>
 
       {/* Intelligent Integration Services Section */}
-      <section id="services" className="bg-black py-32">
+      <section id="services" className="bg-black pt-24 pb-32">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="text-center mb-20">
           <h3 className="text-5xl font-bold mb-6">
