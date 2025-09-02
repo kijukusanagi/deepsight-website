@@ -13,6 +13,8 @@ import {
 import PlatformIntegration from '@/components/services/PlatformIntegration';
 import AutomatedIntelligence from '@/components/services/AutomatedIntelligence';
 import AdaptiveDataArchitecture from '@/components/services/AdaptiveDataArchitecture';
+import BookingButton from '@/components/BookingButton';
+import HeroBookingButton from '@/components/HeroBookingButton';
 
 export default function Home() {
   return (
@@ -132,12 +134,7 @@ export default function Home() {
                   Integrations that learn your business. Not platforms you learn to manage.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                  <button 
-                    onClick={() => window.location.href='#contact'}
-                    className="px-10 py-5 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold transition text-xl hero-tagline"
-                  >
-                    Book a Consultation →
-                  </button>
+                  <HeroBookingButton />
                 </div>
               </div>
             </div>
@@ -354,12 +351,7 @@ export default function Home() {
             <p className="text-xl text-gray-300 mb-10">
               Let&#39;s discuss how to remove silos and create flow across your systems and data.
             </p>
-            <button 
-              onClick={() => window.location.href='mailto:contact@deepsight.com'}
-              className="px-8 py-4 rounded-xl bg-[#22C55E] hover:bg-[#16A34A] text-black font-semibold text-lg transition"
-            >
-              Book a Consultation
-            </button>
+            <BookingButton />
           </div>
         </div>
       </div>
