@@ -135,13 +135,18 @@ export default function AboutPage() {
           
           {/* Profile Image */}
           <div className="flex flex-col items-center mt-16">
-            <div className="w-48 h-48 rounded-full overflow-hidden border-4 border-white/10 hover:border-[#22C55E]/50 transition-all duration-500 shadow-2xl hover:shadow-[#22C55E]/20">
+            <a 
+              href="https://www.linkedin.com/in/kieran-junge-31702078/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="block w-48 h-48 rounded-full overflow-hidden border-4 border-white/10 hover:border-[#22C55E]/50 transition-all duration-500 shadow-2xl hover:shadow-[#22C55E]/20"
+            >
               <img
                 src="/images/profile.png"
                 alt="Kieran - Founder of Deep Sight"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
               />
-            </div>
+            </a>
             <a 
               href="https://www.linkedin.com/in/kieran-junge-31702078/" 
               target="_blank" 
