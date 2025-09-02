@@ -149,81 +149,81 @@ export default function Home() {
       </div>
 
       {/* Problem → Resolution Section */}
-      <div className="bg-black pb-32">
+      <div className="bg-black pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="space-y-12">
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+          <div className="space-y-6">
+            <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
-                  <p className="text-gray-200 text-xl leading-relaxed">
+                  <p className="text-gray-200 text-base leading-relaxed">
                     Multiple teams maintaining brittle point-to-point integrations
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-3xl">→</span>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
+                    <span className="text-white font-bold text-2xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
-                  <p className="text-white text-xl font-semibold leading-relaxed">
+                  <p className="text-white text-base font-semibold leading-relaxed">
                     One unified API gateway, self-healing connections
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
-                  <p className="text-gray-200 text-xl leading-relaxed">
+                  <p className="text-gray-200 text-base leading-relaxed">
                     Excel gymnastics across 5 systems for board reports
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-3xl">→</span>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
+                    <span className="text-white font-bold text-2xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
-                  <p className="text-white text-xl font-semibold leading-relaxed">
+                  <p className="text-white text-base font-semibold leading-relaxed">
                     Live dashboards, single source of truth
                   </p>
                 </div>
               </div>
             </div>
 
-            <div className="p-12 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
-              <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
+            <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
+              <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Problem
                   </div>
-                  <p className="text-gray-200 text-xl leading-relaxed">
+                  <p className="text-gray-200 text-base leading-relaxed">
                     Customer data in Salesforce, orders in NetSuite, inventory in SAP
                   </p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <div className="w-16 h-16 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-3xl">→</span>
+                  <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
+                    <span className="text-white font-bold text-2xl">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-lg mb-3 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
                     Resolution
                   </div>
-                  <p className="text-white text-xl font-semibold leading-relaxed">
+                  <p className="text-white text-base font-semibold leading-relaxed">
                     Real-time sync, complete customer view
                   </p>
                 </div>
@@ -231,7 +231,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-20">
+          <div className="text-center mt-12">
             <button 
               onClick={() => window.location.href='#services'}
               className="px-10 py-5 rounded-xl border-2 border-[#22C55E] text-white hover:bg-[#22C55E]/10 transition text-2xl font-semibold" 
