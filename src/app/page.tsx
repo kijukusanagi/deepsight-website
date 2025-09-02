@@ -252,7 +252,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-2xl">→</span>
+                    <span className="text-white font-bold text-2xl lg:hidden">↓</span>
+                    <span className="text-white font-bold text-2xl hidden lg:inline">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
@@ -284,7 +285,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-2xl">→</span>
+                    <span className="text-white font-bold text-2xl lg:hidden">↓</span>
+                    <span className="text-white font-bold text-2xl hidden lg:inline">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
@@ -316,7 +318,8 @@ export default function Home() {
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="w-12 h-12 rounded-full flex items-center justify-center" style={{backgroundColor: '#22C55E'}}>
-                    <span className="text-white font-bold text-2xl">→</span>
+                    <span className="text-white font-bold text-2xl lg:hidden">↓</span>
+                    <span className="text-white font-bold text-2xl hidden lg:inline">→</span>
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
