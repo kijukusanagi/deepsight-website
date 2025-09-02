@@ -24,7 +24,7 @@ export default function Header() {
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-8" style={{ fontFamily: 'Raleway' }}>
             <Link href="/" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Home</Link>
-            <Link href="/#services" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Services</Link>
+            <Link href="/service" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Services</Link>
             <Link href="/about" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">About</Link>
             <Link href="/#contact" className="text-gray-300 hover:text-white transition-colors font-light tracking-wider">Contact</Link>
             <Link
@@ -72,7 +72,7 @@ export default function Header() {
             <Link href="/" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               Home
             </Link>
-            <Link href="/#services" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
+            <Link href="/service" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>
               Services
             </Link>
             <Link href="/about" className="block px-3 py-2 rounded-lg text-gray-200 hover:bg-white/10 font-light tracking-wide" onClick={() => setOpen(false)}>

@@ -166,7 +166,7 @@ export default function Home() {
             Self-learning connections that get smarter daily
           </p>
           <Link 
-            href="/services"
+            href="/service"
             className="inline-block px-8 py-3 rounded-xl border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E]/10 transition text-lg font-medium"
             style={{ fontFamily: 'Raleway' }}
           >
