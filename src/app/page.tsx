@@ -27,7 +27,7 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/images/singapore-skyline.png"
+            src="/images/singapore-skyline copy.png"
             alt="Singapore skyline"
             className="w-full h-full object-cover"
           />
