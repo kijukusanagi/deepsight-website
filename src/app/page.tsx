@@ -1,6 +1,14 @@
 'use client';
 import Link from 'next/link';
 import Header from '@/components/Header';
+import { 
+  Cross2Icon, 
+  Link2Icon, 
+  FileIcon, 
+  DashboardIcon, 
+  ComponentNoneIcon, 
+  UpdateIcon 
+} from '@radix-ui/react-icons';
 
 import PlatformIntegration from '@/components/services/PlatformIntegration';
 import AutomatedIntelligence from '@/components/services/AutomatedIntelligence';
@@ -155,8 +163,11 @@ export default function Home() {
             <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Problem
+                  <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                    <Cross2Icon className="w-4 h-4 text-red-400" />
+                    <div className="text-red-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Problem
+                    </div>
                   </div>
                   <p className="text-gray-200 text-base leading-relaxed">
                     Multiple teams maintaining brittle point-to-point integrations
@@ -168,8 +179,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Resolution
+                  <div className="flex items-center justify-center lg:justify-end gap-2 mb-2">
+                    <Link2Icon className="w-4 h-4 text-green-400" />
+                    <div className="text-green-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Resolution
+                    </div>
                   </div>
                   <p className="text-white text-base font-semibold leading-relaxed">
                     One unified API gateway, self-healing connections
@@ -181,8 +195,11 @@ export default function Home() {
             <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Problem
+                  <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                    <FileIcon className="w-4 h-4 text-red-400" />
+                    <div className="text-red-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Problem
+                    </div>
                   </div>
                   <p className="text-gray-200 text-base leading-relaxed">
                     Excel gymnastics across 5 systems for board reports
@@ -194,8 +211,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Resolution
+                  <div className="flex items-center justify-center lg:justify-end gap-2 mb-2">
+                    <DashboardIcon className="w-4 h-4 text-green-400" />
+                    <div className="text-green-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Resolution
+                    </div>
                   </div>
                   <p className="text-white text-base font-semibold leading-relaxed">
                     Live dashboards, single source of truth
@@ -207,8 +227,11 @@ export default function Home() {
             <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
                 <div className="flex-1 text-center lg:text-left">
-                  <div className="text-red-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Problem
+                  <div className="flex items-center justify-center lg:justify-start gap-2 mb-2">
+                    <ComponentNoneIcon className="w-4 h-4 text-red-400" />
+                    <div className="text-red-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Problem
+                    </div>
                   </div>
                   <p className="text-gray-200 text-base leading-relaxed">
                     Customer data in Salesforce, orders in NetSuite, inventory in SAP
@@ -220,8 +243,11 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex-1 text-center lg:text-right">
-                  <div className="text-green-400 font-bold text-sm mb-2 uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
-                    Resolution
+                  <div className="flex items-center justify-center lg:justify-end gap-2 mb-2">
+                    <UpdateIcon className="w-4 h-4 text-green-400" />
+                    <div className="text-green-400 font-bold text-sm uppercase tracking-wider" style={{fontFamily: 'Poppins'}}>
+                      Resolution
+                    </div>
                   </div>
                   <p className="text-white text-base font-semibold leading-relaxed">
                     Real-time sync, complete customer view
