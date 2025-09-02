@@ -157,25 +157,24 @@ export default function AboutPage() {
               Founder & CEO of Deep Sight
             </a>
           </div>
-        </div>
-      </section>
-
-      {/* Origin Story Section */}
-      <div className="bg-black py-20">
-        <div className="max-w-5xl mx-auto px-6 lg:px-8">
-          <div className="space-y-8">
+          
+          {/* Origin Story Section */}
+          <div className="mt-20 space-y-8">
             <p className="text-xl md:text-2xl text-gray-200 leading-relaxed">
-              I started Deep Sight after watching a billion-dollar company nearly fail because their systems couldn&#39;t talk.
+              I started Deep Sight after witnessing a fascinating failure pattern inside a federal regulatory agency: three teams investigating the same entity, duplicating months of work, because their systems couldn&#39;t share context.
             </p>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              Not from bad strategy. Not from competition. From the simple inability to connect Salesforce to their warehouse system in time for Black Friday.
+              Each team was drowning in data, juggling spreadsheets and queries, while the answer they all needed lived in the overlap nobody could see. The surveillance team had the patterns. Enforcement had the history. Risk had the models. But the middleware between them was brain-dead.
             </p>
             <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
-              That&#39;s when I realized: the problem isn&#39;t just connecting systems. It&#39;s that once connected, the data just flows dumb. No learning. No patterns. No intelligence.
+              That&#39;s when it clicked: intelligent integration isn&#39;t about moving data faster—it&#39;s about systems that remember what every team learns and surface it when any team needs it.
+            </p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              Until then, we&#39;re in the trenches, building one intelligent integration at a time.
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Vision Section */}
       <div className="bg-black py-32">
