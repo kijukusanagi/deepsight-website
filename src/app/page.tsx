@@ -156,9 +156,86 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Intelligent Integration Services Section */}
+      <section id="services" className="bg-black py-32">
+        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="text-center mb-20">
+          <h3 className="text-5xl font-bold mb-6">
+            <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
+              Intelligent Integration Services
+            </span>
+          </h3>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
+            Self-learning connections that get smarter daily
+          </p>
+          <Link 
+            href="/services"
+            className="inline-block px-8 py-3 rounded-xl border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E]/10 transition text-lg font-medium"
+            style={{ fontFamily: 'Raleway' }}
+          >
+            Services
+          </Link>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {/* Platform Integration */}
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
+            <div className="mb-6">
+              <PlatformIntegration />
+            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
+            <p className="text-[#22C55E]/90 italic mb-4">
+              Self-learning connections that get smarter daily
+            </p>
+            <p className="text-gray-300">
+              Your integrations improve themselves — catching errors, optimizing paths, and predicting failures before they happen.
+            </p>
+          </div>
+
+          {/* Automated Intelligence */}
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
+            <div className="mb-6">
+              <AutomatedIntelligence />
+            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
+            <p className="text-[#22C55E]/90 italic mb-4">
+              Reports that think, not just display
+            </p>
+            <p className="text-gray-300">
+              Living dashboards that learn what matters, surface anomalies, and explain what changed — and why.
+            </p>
+          </div>
+
+          {/* Adaptive Data Architecture */}
+          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
+            <div className="mb-6">
+              <AdaptiveDataArchitecture />
+            </div>
+            <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
+            <p className="text-[#22C55E]/90 italic mb-4">
+              Data structures that evolve with your business
+            </p>
+            <p className="text-gray-300">
+              Intelligent schemas that adapt to new sources, heal broken mappings, and maintain themselves.
+            </p>
+          </div>
+        </div>
+      </div>
+      </section>
+
       {/* Problem → Resolution Section */}
       <div className="bg-black pb-16">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
+          <div className="text-center mb-20">
+            <h3 className="text-5xl font-bold mb-6">
+              <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
+                From Chaos to Control
+              </span>
+            </h3>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              We transform fragmented systems into unified, intelligent operations
+            </p>
+          </div>
           <div className="space-y-6">
             <div className="p-6 rounded-2xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20 hover:border-[#22C55E]/20 transition-all duration-700 hover:scale-[1.01] hover:shadow-xl hover:shadow-[#22C55E]/10">
               <div className="flex flex-col lg:flex-row items-center justify-between gap-4">
@@ -257,83 +334,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="text-center mt-12">
-            <button 
-              onClick={() => window.location.href='#services'}
-              className="px-10 py-5 rounded-xl border-2 border-[#22C55E] text-white hover:bg-[#22C55E]/10 transition text-2xl font-semibold" 
-              style={{fontFamily: 'Poppins'}}
-            >
-              See how we deliver this → Services
-            </button>
-          </div>
         </div>
       </div>
-
-      <section id="services" className="bg-black py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h3 className="text-5xl font-bold mb-6">
-            <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
-              Intelligent Integration Services
-            </span>
-          </h3>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto mb-8">
-            Self-learning connections that get smarter daily
-          </p>
-          <Link 
-            href="/services"
-            className="inline-block px-8 py-3 rounded-xl border-2 border-[#22C55E] text-[#22C55E] hover:bg-[#22C55E]/10 transition text-lg font-medium"
-            style={{ fontFamily: 'Raleway' }}
-          >
-            Services
-          </Link>
-        </div>
-
-        <div className="grid md:grid-cols-3 gap-8">
-          {/* Platform Integration */}
-          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
-            <div className="mb-6">
-              <PlatformIntegration />
-            </div>
-            <h4 className="text-2xl font-bold mb-2 text-white">Platform Integration</h4>
-            <p className="text-[#22C55E]/90 italic mb-4">
-              Self-learning connections that get smarter daily
-            </p>
-            <p className="text-gray-300">
-              Your integrations improve themselves — catching errors, optimizing paths, and predicting failures before they happen.
-            </p>
-          </div>
-
-          {/* Automated Intelligence */}
-          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
-            <div className="mb-6">
-              <AutomatedIntelligence />
-            </div>
-            <h4 className="text-2xl font-bold mb-2 text-white">Automated Intelligence</h4>
-            <p className="text-[#22C55E]/90 italic mb-4">
-              Reports that think, not just display
-            </p>
-            <p className="text-gray-300">
-              Living dashboards that learn what matters, surface anomalies, and explain what changed — and why.
-            </p>
-          </div>
-
-          {/* Adaptive Data Architecture */}
-          <div className="gradient-sweep p-8 rounded-2xl bg-white/5 backdrop-blur border border-white/10 hover:border-[#22C55E]/30 transition-all duration-500 hover:shadow-lg hover:shadow-[#22C55E]/10">
-            <div className="mb-6">
-              <AdaptiveDataArchitecture />
-            </div>
-            <h4 className="text-2xl font-bold mb-2 text-white">Adaptive Data Architecture</h4>
-            <p className="text-[#22C55E]/90 italic mb-4">
-              Data structures that evolve with your business
-            </p>
-            <p className="text-gray-300">
-              Intelligent schemas that adapt to new sources, heal broken mappings, and maintain themselves.
-            </p>
-          </div>
-        </div>
-      </div>
-      </section>
 
       {/* Contact Section */}
       <div className="bg-black py-32" id="contact">
