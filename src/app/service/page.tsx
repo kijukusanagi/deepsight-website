@@ -42,7 +42,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Data Flow Animation - Between Header and Content */}
-      <section className="bg-black py-8">
+      <section className="bg-black py-2">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-center">
           <div className="w-full opacity-100">
             <DataFlowSVG />
