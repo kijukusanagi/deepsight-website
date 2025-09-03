@@ -12,18 +12,18 @@ export default function ServicesPage() {
       {/* Hero Section with Server Background */}
       <section className="relative h-screen">
         {/* Server Background */}
-        <div className="absolute inset-0 h-1/2">
+        <div className="absolute inset-0 h-3/4">
           <img
             src="/images/servers.png"
             alt="Server infrastructure"
             className="w-full h-full object-cover object-top"
-            style={{ transform: 'scale(1, 0.5)', transformOrigin: 'top' }}
+            style={{ transform: 'scale(1, 0.75)', transformOrigin: 'top' }}
           />
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
         {/* Hero Content - Centered over Server Image */}
-        <div className="relative z-20 flex flex-col justify-center items-center h-1/2 pt-16">
+        <div className="relative z-20 flex flex-col justify-center items-center h-3/4 pt-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <div className="p-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
@@ -39,7 +39,7 @@ export default function ServicesPage() {
         </div>
 
         {/* Data Flow Animation - Below Server Image */}
-        <div className="relative z-10 flex items-center justify-center h-1/2 px-8">
+        <div className="relative z-10 flex items-center justify-center h-1/4 px-8">
           <div className="max-w-6xl w-full opacity-100">
             <DataFlowSVG />
           </div>
