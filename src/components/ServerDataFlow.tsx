@@ -25,8 +25,22 @@ export default function ServerDataFlow() {
     const hubSize = 120;
 
     // Data stream configuration
-    const chaosStreams = [];
-    const orderedStreams = [];
+    interface Particle {
+      progress: number;
+      size: number;
+      opacity: number;
+      stuck?: boolean;
+    }
+    
+    interface Stream {
+      particles: Particle[];
+      color: string;
+      path: Array<{x: number; y: number}>;
+      [key: string]: any;
+    }
+    
+    const chaosStreams: Stream[] = [];
+    const orderedStreams: Stream[] = [];
 
     // Initialize 15-20 chaos streams (left side)
     const initChaosStreams = () => {
@@ -41,8 +55,8 @@ export default function ServerDataFlow() {
         const startX = 50 + Math.random() * 100;
         const startY = (canvas.height * 0.2) + (i / 17) * (canvas.height * 0.6);
         
-        const stream = {
-          particles: [],
+        const stream: Stream = {
+          particles: [] as Particle[],
           color: chaosColors[i % chaosColors.length],
           path: generateComplexTangledPath(startX, startY, hubX - hubSize/2, hubY),
           isDead: Math.random() < 0.2, // 20% chance of dead-end streams
@@ -76,8 +90,8 @@ export default function ServerDataFlow() {
         const endX = canvas.width - 200;
         const endY = (canvas.height * 0.4) + (i / 3) * (canvas.height * 0.4); // Moved down from 0.3 to 0.4
         
-        const stream = {
-          particles: [],
+        const stream: Stream = {
+          particles: [] as Particle[],
           color: orderedColors[i % orderedColors.length],
           path: generateCleanPath(startX, startY, endX, endY),
           outcome: outcomes[i % outcomes.length],
@@ -99,7 +113,7 @@ export default function ServerDataFlow() {
     };
 
     // Generate highly complex tangled paths for chaos
-    function generateComplexTangledPath(startX, startY, endX, endY) {
+    function generateComplexTangledPath(startX: number, startY: number, endX: number, endY: number) {
       const points = [{ x: startX, y: startY }];
       const segments = 8 + Math.floor(Math.random() * 6); // 8-14 segments
       
@@ -122,7 +136,7 @@ export default function ServerDataFlow() {
     }
 
     // Generate clean, straight paths for ordered streams
-    function generateCleanPath(startX, startY, endX, endY) {
+    function generateCleanPath(startX: number, startY: number, endX: number, endY: number) {
       const points = [];
       const segments = 30;
       
@@ -140,6 +154,7 @@ export default function ServerDataFlow() {
 
     // Draw dominant intelligent hub (hexagonal)
     function drawIntelligentHub() {
+      if (!ctx) return;
       const time = Date.now() * 0.001;
       const breathingScale = 1 + Math.sin(time * 1.5) * 0.1;
       const pulseIntensity = 0.3 + Math.sin(time * 2) * 0.2; // Pulsing glow animation
@@ -231,7 +246,7 @@ export default function ServerDataFlow() {
     }
 
     // Get position along path
-    function getPathPosition(path, progress) {
+    function getPathPosition(path: Array<{x: number; y: number}>, progress: number) {
       if (progress >= 1) progress = 0.99;
       const segmentCount = path.length - 1;
       const segment = Math.floor(progress * segmentCount);
@@ -248,6 +263,7 @@ export default function ServerDataFlow() {
 
     // Draw chaos streams with complex behavior
     function drawChaosStreams() {
+      if (!ctx) return;
       chaosStreams.forEach((stream, index) => {
         // Draw path
         ctx.strokeStyle = stream.color;
@@ -272,7 +288,7 @@ export default function ServerDataFlow() {
         ctx.setLineDash([]);
         
         // Draw particles
-        stream.particles.forEach(particle => {
+        stream.particles.forEach((particle: Particle) => {
           if (stream.isDead && particle.progress > 0.7) {
             particle.stuck = true;
             return; // Dead end
@@ -299,6 +315,7 @@ export default function ServerDataFlow() {
 
     // Draw ordered streams with business outcomes
     function drawOrderedStreams() {
+      if (!ctx) return;
       orderedStreams.forEach((stream, index) => {
         // Thick, confident lines
         ctx.strokeStyle = stream.color;
@@ -327,7 +344,7 @@ export default function ServerDataFlow() {
         ctx.fillText(stream.outcome, endPos.x + 10, endPos.y + 5);
         
         // High-speed particles
-        stream.particles.forEach(particle => {
+        stream.particles.forEach((particle: Particle) => {
           const pos = getPathPosition(stream.path, particle.progress);
           
           ctx.globalAlpha = particle.opacity;
@@ -348,9 +365,10 @@ export default function ServerDataFlow() {
     }
 
     // Animation loop
-    let animationId;
+    let animationId: number;
     
     const animate = () => {
+      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       // Draw in order: chaos → hub → ordered
