@@ -227,7 +227,7 @@ export default function ServicesPage() {
             <ul className="space-y-6">
               <li className="flex items-start">
                 <span className="text-[#22C55E] mr-4 text-xl mt-1">�</span>
-                <span className="text-lg text-gray-300">Your teams email spreadsheets because your "integrated" systems aren't</span>
+                <span className="text-lg text-gray-300">Your teams email spreadsheets because your &apos;integrated&apos; systems aren&apos;t</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#22C55E] mr-4 text-xl mt-1">�</span>
