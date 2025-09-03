@@ -24,7 +24,7 @@ export default function ServicesPage() {
           </div>
 
           {/* Hero Content - Centered within Server Image */}
-          <div className="absolute inset-0 z-20 flex flex-col justify-center items-center">
+          <div className="absolute inset-0 z-20 flex flex-col justify-center items-center" style={{ top: '-20%' }}>
             <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
               <div className="p-8">
                 <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
@@ -42,7 +42,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Data Flow Animation - Between Header and Content - Desktop Only */}
-      <section className="bg-black py-2 hidden md:block">
+      <section className="bg-black py-2 hidden md:block" style={{ marginTop: '-10%' }}>
         <div className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-center">
           <div className="w-full opacity-100">
             <DataFlowSVG />
