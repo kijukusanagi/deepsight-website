@@ -22,8 +22,8 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        {/* Hero Content - Centered over Server Image */}
-        <div className="relative z-20 flex flex-col justify-center items-center h-3/4 pt-16">
+        {/* Hero Content - Centered within Server Image */}
+        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center h-3/4">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <div className="p-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
