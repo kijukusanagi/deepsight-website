@@ -127,7 +127,7 @@ export default function Home() {
                 <p className="text-3xl text-gray-200 mb-6 max-w-3xl mx-auto font-medium hero-tagline">
                   No silos. No friction. Just flow.
                 </p>
-                <p className="text-xl text-gray-300 mb-3 max-w-4xl mx-auto leading-relaxed">
+                <p className="text-xl text-white mb-3 max-w-4xl mx-auto leading-relaxed font-medium">
                   We build middleware that evolves — where tedious manual work dissolves into intelligent automation.
                 </p>
                 <p className="text-xl text-white font-bold mb-10 max-w-4xl mx-auto leading-relaxed">
