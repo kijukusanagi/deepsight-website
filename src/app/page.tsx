@@ -147,8 +147,7 @@ export default function Home() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <p className="text-2xl md:text-3xl text-gray-200 leading-relaxed text-center font-light">
             We unify platforms and data through a single integration layer — 
-            <span className="text-white font-medium"> invisible middleware deployed in 6 weeks</span> that 
-            makes your existing systems work as one.
+            <span className="text-white font-medium"> designed to be invisible to end users and deployed as fast as your systems allow.</span>
           </p>
         </div>
       </div>
