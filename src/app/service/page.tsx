@@ -1,7 +1,7 @@
 'use client';
 import Header from '@/components/Header';
 import BookingButton from '@/components/BookingButton';
-import ServerDataFlow from '@/components/ServerDataFlow';
+import DataFlowSVG from '@/components/DataFlowSVG';
 
 export default function ServicesPage() {
   return (
@@ -21,6 +21,13 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
+        {/* Data Flow Overlay */}
+        <div className="absolute inset-0 flex items-center justify-center px-8 pt-48">
+          <div className="max-w-6xl w-full opacity-100 mix-blend-screen">
+            <DataFlowSVG />
+          </div>
+        </div>
+
         {/* Hero Content - Above Animation */}
         <div className="relative z-20 flex flex-col justify-start pt-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
@@ -37,8 +44,6 @@ export default function ServicesPage() {
           </div>
         </div>
 
-        {/* Data Flow Animation */}
-        <ServerDataFlow />
 
       </section>
 
