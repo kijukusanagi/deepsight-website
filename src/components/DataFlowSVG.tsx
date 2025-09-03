@@ -13,7 +13,7 @@ export default function DataFlowSVG() {
     '0011001101101001000010100010',
     '010101100110100100001101001010'   // Bottom
   ]);
-  const intervalRef = useRef<NodeJS.Timeout>();
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   
   useEffect(() => {
     setMounted(true);
