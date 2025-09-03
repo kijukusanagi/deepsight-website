@@ -41,13 +41,17 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Data Flow Animation - Between Header and Content */}
-      <section className="bg-black py-2">
+      {/* Data Flow Animation - Between Header and Content - Desktop Only */}
+      <section className="bg-black py-2 hidden md:block">
         <div className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-center">
           <div className="w-full opacity-100">
             <DataFlowSVG />
           </div>
         </div>
+      </section>
+
+      {/* Mobile spacing section */}
+      <section className="bg-black py-4 block md:hidden">
       </section>
 
       {/* Introduction */}
