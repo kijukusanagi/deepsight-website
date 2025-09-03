@@ -12,7 +12,7 @@ export default function ServicesPage() {
       {/* Hero Section with Server Background */}
       <section className="relative h-screen">
         {/* Server Background */}
-        <div className="absolute inset-0">
+        <div className="absolute inset-0 h-1/2">
           <img
             src="/images/servers.png"
             alt="Server infrastructure"
@@ -22,17 +22,10 @@ export default function ServicesPage() {
           <div className="absolute inset-0 bg-black/50" />
         </div>
 
-        {/* Data Flow Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center px-8 pt-48">
-          <div className="max-w-6xl w-full opacity-100 mix-blend-screen">
-            <DataFlowSVG />
-          </div>
-        </div>
-
-        {/* Hero Content - Above Animation */}
-        <div className="relative z-20 flex flex-col justify-center items-center min-h-screen pt-16 pb-8">
+        {/* Hero Content - Centered over Server Image */}
+        <div className="relative z-20 flex flex-col justify-center items-center h-1/2 pt-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <div className="p-8 mb-8">
+            <div className="p-8">
               <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
                 <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                   We End Data Silos
@@ -45,7 +38,12 @@ export default function ServicesPage() {
           </div>
         </div>
 
-
+        {/* Data Flow Animation - Below Server Image */}
+        <div className="relative z-10 flex items-center justify-center h-1/2 px-8">
+          <div className="max-w-6xl w-full opacity-100">
+            <DataFlowSVG />
+          </div>
+        </div>
       </section>
 
       {/* Introduction */}
