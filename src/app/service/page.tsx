@@ -10,37 +10,41 @@ export default function ServicesPage() {
       <Header />
 
       {/* Hero Section with Server Background */}
-      <section className="relative h-screen">
+      <section className="relative">
         {/* Server Background */}
-        <div className="absolute inset-0 h-3/4">
-          <img
-            src="/images/servers.png"
-            alt="Server infrastructure"
-            className="w-full h-full object-cover object-top"
-            style={{ transform: 'scale(1, 0.75)', transformOrigin: 'top' }}
-          />
-          <div className="absolute inset-0 bg-black/50" />
-        </div>
+        <div className="relative h-screen">
+          <div className="absolute inset-0">
+            <img
+              src="/images/servers.png"
+              alt="Server infrastructure"
+              className="w-full h-full object-cover object-top"
+              style={{ transform: 'scale(1, 0.75)', transformOrigin: 'top' }}
+            />
+            <div className="absolute inset-0 bg-black/50" />
+          </div>
 
-        {/* Hero Content - Centered within Server Image */}
-        <div className="absolute inset-0 z-20 flex flex-col justify-center items-center h-3/4">
-          <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <div className="p-8">
-              <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
-                <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
-                  We End Data Silos
-                </span>
-              </h1>
-              <p className="text-xl md:text-xl lg:text-3xl text-gray-100 font-light italic mb-8 max-w-6xl mx-auto leading-relaxed">
-                Most integrations just move data. We build systems that think.
-              </p>
+          {/* Hero Content - Centered within Server Image */}
+          <div className="absolute inset-0 z-20 flex flex-col justify-center items-center">
+            <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
+              <div className="p-8">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
+                  <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
+                    We End Data Silos
+                  </span>
+                </h1>
+                <p className="text-xl md:text-xl lg:text-3xl text-gray-100 font-light italic mb-8 max-w-6xl mx-auto leading-relaxed">
+                  Most integrations just move data. We build systems that think.
+                </p>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        {/* Data Flow Animation - Below Server Image */}
-        <div className="relative z-10 flex items-center justify-center h-1/4 px-8">
-          <div className="max-w-6xl w-full opacity-100">
+      {/* Data Flow Animation - Between Header and Content */}
+      <section className="bg-black py-16">
+        <div className="max-w-6xl mx-auto px-6 lg:px-8 flex items-center justify-center">
+          <div className="w-full opacity-100">
             <DataFlowSVG />
           </div>
         </div>
