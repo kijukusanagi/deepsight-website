@@ -31,7 +31,7 @@ export default function ServicesPage() {
         {/* Hero Content - Above Animation */}
         <div className="relative z-20 flex flex-col justify-start pt-16">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
-            <div className="backdrop-blur-md bg-black/12 rounded-3xl p-8 mb-8">
+            <div className="p-8 mb-8">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
                 <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                   We End Data Silos
