@@ -27,7 +27,7 @@ export default function ServicesPage() {
             <div className="backdrop-blur-md bg-black/12 rounded-3xl p-8 mb-8">
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
                 <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
-                  We Kill Data Silos
+                  We End Data Silos
                 </span>
               </h1>
               <p className="text-xl md:text-3xl text-gray-100 font-light italic mb-8 max-w-6xl mx-auto leading-relaxed">
@@ -284,7 +284,7 @@ export default function ServicesPage() {
         <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
           <div className="p-12 rounded-3xl bg-white/5 backdrop-blur border border-white/10">
             <h3 className="text-4xl md:text-5xl font-bold mb-8" style={{ fontFamily: 'Poppins' }}>
-              Ready to kill your data silos and bring{' '}
+              Ready to end your data silos and bring{' '}
               <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                 intelligence
               </span>{' '}
