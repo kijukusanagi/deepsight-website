@@ -47,10 +47,10 @@ export default function ServicesPage() {
         <div className="max-w-5xl mx-auto px-6 lg:px-8">
           <div className="space-y-8">
             <p className="text-xl text-gray-300 leading-relaxed">
-              After architecting data systems for federal regulators, we learned something critical: every organization is drowning in connections that don't actually connect anything. APIs that break monthly. Integrations that move data without context. Reports that reflect yesterday's truth.
+              After architecting data systems for federal regulators, we learned something critical: every organization is drowning in connections that don&apos;t actually connect anything. APIs that break monthly. Integrations that move data without context. Reports that reflect yesterday&apos;s truth.
             </p>
             <p className="text-xl text-white font-medium leading-relaxed">
-              We don't just connect your platforms. We build intelligent middleware that learns from every transaction, remembers every pattern, and gets smarter over time.
+              We don&apos;t just connect your platforms. We build intelligent middleware that learns from every transaction, remembers every pattern, and gets smarter over time.
             </p>
           </div>
         </div>
@@ -81,7 +81,7 @@ export default function ServicesPage() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">What We Actually Do:</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We connect platforms through intelligent middleware that doesn't just syncit learns. One update flows everywhere it should, nowhere it shouldn't. Your systems stay as they are; we make them work as one.
+                    We connect platforms through intelligent middleware that doesn&apos;t just sync—it learns. One update flows everywhere it should, nowhere it shouldn&apos;t. Your systems stay as they are; we make them work as one.
                   </p>
                 </div>
                 <div>
@@ -114,7 +114,7 @@ export default function ServicesPage() {
                 <div>
                   <h4 className="text-lg font-semibold text-[#22C55E] mb-3">The Reality:</h4>
                   <p className="text-gray-200 leading-relaxed font-medium">
-                    Reports that update in real-time. Decisions made in hours, not weeks. See tomorrow's problems today.
+                    Reports that update in real-time. Decisions made in hours, not weeks. See tomorrow&apos;s problems today.
                   </p>
                 </div>
               </div>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                 <div>
                   <h4 className="text-lg font-semibold text-white mb-3">What We Actually Do:</h4>
                   <p className="text-gray-300 leading-relaxed">
-                    We consolidate and structure massive datasets into a single, intelligent view. Our middleware doesn't just organize datait learns patterns, surfaces anomalies, and remembers what every query teaches it.
+                    We consolidate and structure massive datasets into a single, intelligent view. Our middleware doesn&apos;t just organize data—it learns patterns, surfaces anomalies, and remembers what every query teaches it.
                   </p>
                 </div>
                 <div>
@@ -223,7 +223,7 @@ export default function ServicesPage() {
           </h2>
 
           <div className="p-8 rounded-3xl bg-gradient-to-r from-white/10 to-white/5 backdrop-blur border border-white/20">
-            <p className="text-xl text-white mb-8 font-medium">You're our client if:</p>
+            <p className="text-xl text-white mb-8 font-medium">You&apos;re our client if:</p>
             <ul className="space-y-6">
               <li className="flex items-start">
                 <span className="text-[#22C55E] mr-4 text-xl mt-1">�</span>
@@ -235,11 +235,11 @@ export default function ServicesPage() {
               </li>
               <li className="flex items-start">
                 <span className="text-[#22C55E] mr-4 text-xl mt-1">�</span>
-                <span className="text-lg text-gray-300">You've built an entire team just to reconcile data between systems</span>
+                <span className="text-lg text-gray-300">You&apos;ve built an entire team just to reconcile data between systems</span>
               </li>
               <li className="flex items-start">
                 <span className="text-[#22C55E] mr-4 text-xl mt-1">�</span>
-                <span className="text-lg text-gray-300">You're one acquisition away from complete data chaos</span>
+                <span className="text-lg text-gray-300">You&apos;re one acquisition away from complete data chaos</span>
               </li>
             </ul>
           </div>

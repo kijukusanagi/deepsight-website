@@ -1,5 +1,4 @@
 'use client';
-import Link from 'next/link';
 import Header from '@/components/Header';
 import { useEffect, useRef } from 'react';
 

@@ -36,7 +36,12 @@ export default function ServerDataFlow() {
       particles: Particle[];
       color: string;
       path: Array<{x: number; y: number}>;
-      [key: string]: any;
+      isDead?: boolean;
+      isLoop?: boolean;
+      isDuplicate?: boolean;
+      outcome?: string;
+      thickness?: number;
+      speed?: number;
     }
     
     const chaosStreams: Stream[] = [];
@@ -264,7 +269,7 @@ export default function ServerDataFlow() {
     // Draw chaos streams with complex behavior
     function drawChaosStreams() {
       if (!ctx) return;
-      chaosStreams.forEach((stream, index) => {
+      chaosStreams.forEach((stream) => {
         // Draw path
         ctx.strokeStyle = stream.color;
         ctx.lineWidth = stream.isDuplicate ? 3 : 1.5;
@@ -316,10 +321,10 @@ export default function ServerDataFlow() {
     // Draw ordered streams with business outcomes
     function drawOrderedStreams() {
       if (!ctx) return;
-      orderedStreams.forEach((stream, index) => {
+      orderedStreams.forEach((stream) => {
         // Thick, confident lines
         ctx.strokeStyle = stream.color;
-        ctx.lineWidth = stream.thickness;
+        ctx.lineWidth = stream.thickness || 3;
         ctx.globalAlpha = 0.8;
         
         ctx.beginPath();
@@ -331,7 +336,7 @@ export default function ServerDataFlow() {
         
         // Draw outcome labels with backdrop
         const endPos = stream.path[stream.path.length - 1];
-        const textWidth = ctx.measureText(stream.outcome).width;
+        const textWidth = ctx.measureText(stream.outcome || '').width;
         
         // Dark backdrop for better readability
         ctx.fillStyle = 'rgba(0, 0, 0, 0.7)';
@@ -341,7 +346,7 @@ export default function ServerDataFlow() {
         ctx.fillStyle = stream.color;
         ctx.font = 'bold 13px Poppins';
         ctx.globalAlpha = 1;
-        ctx.fillText(stream.outcome, endPos.x + 10, endPos.y + 5);
+        ctx.fillText(stream.outcome || '', endPos.x + 10, endPos.y + 5);
         
         // High-speed particles
         stream.particles.forEach((particle: Particle) => {
@@ -354,7 +359,7 @@ export default function ServerDataFlow() {
           ctx.fill();
           
           // Fast, smooth movement
-          particle.progress += stream.speed;
+          particle.progress += stream.speed || 0.012;
           if (particle.progress > 1) {
             particle.progress = 0;
           }
