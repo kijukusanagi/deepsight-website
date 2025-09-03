@@ -29,15 +29,15 @@ export default function ServicesPage() {
         </div>
 
         {/* Hero Content - Above Animation */}
-        <div className="relative z-20 flex flex-col justify-start pt-16">
+        <div className="relative z-20 flex flex-col justify-center items-center min-h-screen pt-16 pb-8">
           <div className="max-w-7xl mx-auto px-6 lg:px-8 text-center">
             <div className="p-8 mb-8">
-              <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
+              <h1 className="text-4xl md:text-7xl lg:text-8xl font-bold mb-6 md:mb-8 leading-tight" style={{ fontFamily: 'Poppins' }}>
                 <span className="bg-gradient-to-r from-[#22C55E] to-[#16A34A] bg-clip-text text-transparent">
                   We End Data Silos
                 </span>
               </h1>
-              <p className="text-xl md:text-3xl text-gray-100 font-light italic mb-8 max-w-6xl mx-auto leading-relaxed">
+              <p className="text-lg md:text-xl lg:text-3xl text-gray-100 font-light italic mb-8 max-w-6xl mx-auto leading-relaxed">
                 Most integrations just move data. We build systems that think.
               </p>
             </div>

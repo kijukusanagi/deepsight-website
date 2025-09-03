@@ -281,7 +281,7 @@ export default function DataFlowSVG() {
       </g>
     </svg>
 
-      {/* Mobile version - top to bottom */}
+    {/* Mobile version - top to bottom */}
       <svg
         viewBox="0 0 400 800"
         className="w-full h-full block md:hidden"
